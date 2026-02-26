@@ -1,0 +1,548 @@
+﻿Location;Name;City;Postl Code;Street;House No.;C/R
+SP_HBAB;abat AG;Bremen;28217;An der Reeperbahn;10;DE
+501;Thomas Hofmann;Bremen;28195;GrÃ¼nenweg;5;DE
+502;Lea Becker;Bremen;28217;Am Weser-Terminal;8;DE
+503;Maximilian Müller;Bremen;28195;Doventorsdeich;Jan 00;DE
+504;Theresa König;Verden (Aller);27283;KleiststraÃŸe;10;DE
+505;Leonie Schmidt;Bremen;28237;Stendorfer StraÃŸe;39;DE
+506;Maximilian Frank;Bremen;28195;BornstraÃŸe;52;DE
+507;Jonas Schubert;Bremen;28209;Joseph-Haydn-StraÃŸe;5;DE
+508;Laura Köhler;Geestland;27624;Steinauer StraÃŸe;2;DE
+509;Lisa Lang;Sulingen;27232;SchmelingstraÃŸe;55;DE
+510;Amelie Beck;Bruchhausen-Vilsen;27305;Riethausen;11;DE
+511;Felix Fischer;Verden (Aller);27283;BÃ¼rgermeister-MÃ¼nchmeyer-StraÃŸe;4;DE
+512;Julia Lehmann;Ritterhude;27721;Auf dem Radberg;2;DE
+513;Sebastian Klein;Bremen;28197;HasenbÃ¼rener LandstraÃŸe;68;DE
+514;Lars Schulze;Bruchhausen-Vilsen;27305;Am Brink;1;DE
+516;Emma Hartmann;Bremen;28195;HutfilterstraÃŸe;7;DE
+517;Lena Friedrich;Bremen;28215;Willy-Brandt-Platz;7;DE
+518;Leon König;Bremen;28195;Breitenweg;27;DE
+519;Franziska Schmitz;Bremen;28199;Clara-Jaschke-StraÃŸe;3;DE
+520;Thomas Neumann;Sulingen;27232;SÃ¼dstraÃŸe;37;DE
+521;Thomas Krause;Bremen;28259;LÃ¶wener StraÃŸe;2;DE
+522;Sarah Richter;Bremen;28195;Am Wall;198;DE
+523;Leon Schmitz;VisselhÃ¶vede;27374;Celler StraÃŸe;60;DE
+524;Leonie Köhler;Bremen;28197;DuntzestraÃŸe;36;DE
+525;Jan Lorenz;Bremen;28237;Leuthener StraÃŸe;2;DE
+526;Lukas Schubert;Bremen;28195;BÃ¼rgerstraÃŸe;7;DE
+527;Jonas Fischer;Beverstedt;27616;Heiser MÃ¼hle;1;DE
+528;Laura Meyer;Verden (Aller);27283;Platz;1;DE
+529;Isabel Roth;Bremen;28215;Jenaer StraÃŸe;25;DE
+530;Emma Richter;Twistringen;27239;Achter Harms Holt;11;DE
+531;Victoria Frank;Twistringen;27239;WildeshÃ¤user StraÃŸe;47;DE
+532;Paul Köhler;Bremen;28207;Quintschlag;93;DE
+533;Thomas Fischer;Bremen;28777;Dillener StraÃŸe;75;DE
+534;Katharina Neumann;Bremen;28237;Alter Winterweg;32;DE
+535;Emilia Friedrich;Bremen;28215;GoesselstraÃŸe;1;DE
+536;Thomas Müller;Bremen;28217;Konsul-Smidt-StraÃŸe;8;DE
+537;Lars Friedrich;Bremen;28237;WerftstraÃŸe;19;DE
+538;Simon Braun;Loxstedt;27612;Helmut-Neynaber-StraÃŸe;2;DE
+539;Lukas Roth;ReeÃŸum;27367;Am Brink;11;DE
+540;Isabel Keller;Verden (Aller);27283;Borsteler Chaussee;169;DE
+541;Johanna Becker;Bremen;28217;Hansator;7;DE
+542;Emilia Möller;Bremen;28195;Bahnhofsplatz;15;DE
+543;Tobias Hartmann;Bremen;28755;Am Werfttor;8;DE
+544;Theresa Braun;Bassum;27211;KÃ¤tingen;1;DE
+545;Lars Keller;Kirchdorf;27245;Barenburger StraÃŸe;10;DE
+546;Charlotte Schmitt;Osterholz-Scharmbeck;27711;Am Osterholze;29;DE
+547;Anton Schneider;Bremen;28197;Westerdeich;1;DE
+548;Lea Winkler;Beverstedt;27616;Heerstedter StraÃŸe;5;DE
+549;Victoria Winkler;Osterholz-Scharmbeck;27711;Auf dem PaÃŸ;7;DE
+550;Lisa Walter;Sottrum;27367;SchillerstraÃŸe;11;DE
+551;Leon Schmidt;Loxstedt;27612;Heinrich-Luden-StraÃŸe;7;DE
+552;Christian Roth;Bremen;28217;WolfardstraÃŸe;2;DE
+553;Max Kaiser;Bremen;28195;Doventorsteinweg;48;DE
+554;Felix Meyer;Bremen;28207;Einbecker StraÃŸe;1;DE
+555;Lena Hoffmann;Bremen;28329;SchmÃ¶llner Weg;1;DE
+556;Julia Neumann;Bremen;28259;Hermannsburg;169;DE
+557;Max Wolf;Bremen;28219;RÃ¼bekamp;52;DE
+558;Anton König;Geestland;27624;Lindenallee;13;DE
+559;Leonie Schulz;Bruchhausen-Vilsen;27305;Weseloher StraÃŸe;23;DE
+560;Amelie Lange;Bremen;28195;FranziskanerstraÃŸe;7;DE
+561;Katharina Fuchs;Bremen;28279;StaustraÃŸe;31;DE
+562;Tobias Fuchs;Twistringen;27239;RaiffeisenstraÃŸe;35;DE
+563;Maximilian Keller;Bremen;28307;Dasbacher StraÃŸe;26;DE
+564;Mia Schulz;Twistringen;27239;KampstraÃŸe;23;DE
+565;Hannah Friedrich;Verden (Aller);27283;Trift;1;DE
+566;Emma Richter;Langwedel;27299;Etelser StraÃŸe;43;DE
+567;Max Meier;Brake;26919;Sinaburger StraÃŸe;10;DE
+568;Maximilian Braun;Bremen;28207;Emil-von-Behring-StraÃŸe;8;DE
+569;Christian Fischer;Osterholz-Scharmbeck;27711;KirchenstraÃŸe;9;DE
+570;Tim Neumann;Ritterhude;27721;GoethestraÃŸe;53;DE
+571;Lukas Klein;Bremen;28307;Hans-Bredow-StraÃŸe;44;DE
+572;Julia Fuchs;Bremen;28199;GrÃ¼nenstraÃŸe;9;DE
+573;Sophie Baumann;Bremen;28199;ZentaurenstraÃŸe;1;DE
+574;Jonas Fischer;Bremen;28217;Friedrich-Naumann-Ring;2;DE
+575;Emilia Schröder;Verden;27283;Waller Bahnhof;20;DE
+576;Emilia Werner;ReeÃŸum;27367;Osmannsberg;2a;DE
+577;Ben Hahn;Bremen;28195;HankenstraÃŸe;25;DE
+578;Michael Schneider;Bremen;28195;Katharinenklosterhof;7;DE
+579;Ben Kaiser;Hagen im Bremischen;27628;Reihe;6;DE
+580;Helena Klein;Bremen;28199;Solinger StraÃŸe;13;DE
+581;Philipp Winkler;Bremen;28211;MommsenstraÃŸe;2;DE
+582;Johanna Weiß;Verden (Aller);27283;MarienstraÃŸe;12;DE
+583;Paul Zimmermann;Osterholz-Scharmbeck;27711;BÃ¶rdestraÃŸe;23;DE
+584;Sophie Wolf;Osterholz-Scharmbeck;27711;Scharmbeckstoteler StraÃŸe;2;DE
+585;Johanna Müller;Osterholz-Scharmbeck;27711;Brahmsweg;1;DE
+586;Sophia Herrmann;Hagen im Bremischen;27628;LindenbruchstraÃŸe;16;DE
+587;Emilia Müller;Bremen;28217;Waller Stieg;1;DE
+588;Emilia Werner;Bremen;28197;Fedderwarder Weg;55;DE
+589;Anna Möller;Beverstedt;27616;In der Heide;28;DE
+590;Lea Friedrich;Geestland;27624;Wiesenhof;1;DE
+591;Laura Fuchs;Bremen;28197;Hermann-Ritter-StraÃŸe;101;DE
+592;Jan Hofmann;Bremen;28329;Haverbecker Weg;1;DE
+593;Simon Krause;Bremen;28755;LerchenstraÃŸe;3;DE
+594;Max Möller;Ritterhude;27721;Stettiner StraÃŸe;61;DE
+595;Hannah Krause;Bremen;28237;Rasteder StraÃŸe;1a;DE
+596;Johanna Köhler;Twistringen;27239;Im Oberdorf;8;DE
+597;Johanna Wolf;Bremen;28217;SachsensteinstraÃŸe;3;DE
+598;Alexander Friedrich;Loxstedt;27612;Robert-Bosch-StraÃŸe;3;DE
+599;Nele Hofmann;Bremen;28217;Am Winterhafen;1b;DE
+600;Julian Lorenz;Twistringen;27239;ParkstraÃŸe;1;DE
+601;Anna Günther;Bremen;28359;Marcusallee;1;DE
+602;Michael Schneider;Kirchlinteln;27308;Ludwigslust;13;DE
+603;David Neumann;Loxstedt;27612;ParkstraÃŸe;9;DE
+604;Theresa Jung;Worpswede;27726;BergstraÃŸe;35;DE
+605;Greta Winkler;Bremen;28197;Niedervielander StraÃŸe;11;DE
+606;Laura Meyer;Bremen;28259;Bauerland;8;DE
+607;Hannah Schmid;Hoya;27318;Von-Kronenfeldt-StraÃŸe;31;DE
+608;Emma Peters;Osterholz-Scharmbeck;27711;Hinter dem Steenesch;17;DE
+609;Michael Schulze;Langwedel;27299;An der Autobahn;1;DE
+610;Lena König;Bremen;28217;HessensteinstraÃŸe;2;DE
+612;Sebastian Lehmann;Bremen;28195;BahnhofstraÃŸe;37;DE
+613;Erik Hoffmann;Bremen;28219;Rosenheimer StraÃŸe;33;DE
+614;Lars Hoffmann;Verden (Aller);27283;Scharnhorster StraÃŸe;49;DE
+615;Theresa Scholz;Bremen;28329;Franz-Mehring-StraÃŸe;1;DE
+616;Jan Müller;Bremen;28201;Friedrich-Ebert-StraÃŸe;142;DE
+617;Felix Peters;Rotenburg (WÃ¼mme);27356;Harburger StraÃŸe;4;DE
+618;Sophia Meier;Bremen;28199;Otto-Lilienthal-StraÃŸe;25;DE
+619;Julia Krause;Bremen;28207;WinkelstraÃŸe;30;DE
+620;Tobias Herrmann;Bremen;28359;Hochschulring;1;DE
+621;Paul König;Bremen;28217;HafenstraÃŸe;52a;DE
+622;Helena Schulz;VisselhÃ¶vede;27374;GoethestraÃŸe;19;DE
+623;Sarah Winkler;Kirchlinteln;27308;WehrstraÃŸe;5;DE
+624;Lisa Hoffmann;Bremen;28195;QueerenstraÃŸe;10;DE
+625;Tobias Krause;Bremen;28329;BÃ¼rgermeister-Spitta-Allee;9d;DE
+626;Julia Krause;Hoya;27318;DeichstraÃŸe;27;DE
+627;Sarah Möller;Bremen;28217;Fabrikenufer;115;DE
+628;Felix Baumann;Kirchlinteln;27308;MichaelisstraÃŸe;1;DE
+629;Greta Vogel;Bremen;28325;EllenerbrokstraÃŸe;55;DE
+630;Christian Schmitt;Bremen;28211;VionvillestraÃŸe;2;DE
+631;Christian Weber;Twistringen;27239;WeiÃŸe Riede;35;DE
+632;Victoria Beck;Stadland;26935;MarktstraÃŸe;10B;DE
+633;Lena Fischer;Verden (Aller);27283;GroÃŸe StraÃŸe;100;DE
+634;Theresa Schneider;Twistringen;27239;Harpstedter StraÃŸe;6;DE
+635;Mia Kaiser;Bremen;28329;Adam-Stegerwald-StraÃŸe;7;DE
+636;David Günther;Bremen;28219;FleetstraÃŸe;68;DE
+637;Fabian Hoffmann;Geestland;27624;Drangstedter StraÃŸe;58;DE
+638;Felix Schubert;Verden (Aller);27283;Brunnenweg;53c;DE
+639;Ben Huber;Bremen;28215;AndreestraÃŸe;1;DE
+640;Fabian Lang;Beverstedt;27616;LogestraÃŸe;39-41;DE
+641;Mia Lange;Verden (Aller);27283;Richtweg;27;DE
+642;Erik Zimmermann;Rotenburg;27356;KÃ¶nigsberger StraÃŸe;46;DE
+643;Julia Herrmann;Bremen;28219;Dahlienweg;2;DE
+644;Johanna Zimmermann;Bremen;28219;Rosenweg;4;DE
+645;Helena Hahn;Twistringen;27239;Breite StraÃŸe;14;DE
+646;Helena Roth;Osterholz-Scharmbeck;27711;Rosenweg;10;DE
+647;Ben Braun;Rotenburg (WÃ¼mme);27356;In der Ahe;29;DE
+648;Hannah Schneider;Bremen;28195;Am Landherrnamt;12;DE
+649;Fabian Walter;Bremen;28213;Kastanienallee;33;DE
+650;David Berger;Bremen;28217;Steffensweg;89;DE
+651;Sebastian Herrmann;Rotenburg (WÃ¼mme);27356;Auf dem Hanfberg;16;DE
+652;Marlene Vogel;Bremen;28237;Lissaer StraÃŸe;58,60,62;DE
+653;Lea Herrmann;Bremen;28717;Rotdornallee;55;DE
+654;Laura Lorenz;Twistringen;27239;Theodor-Storm-StraÃŸe;12;DE
+655;Hannah Werner;Verden (Aller);27283;Nasse StraÃŸe;1;DE
+656;Christian Weiß;Bremen;28199;LangemarckstraÃŸe;38;DE
+657;Leon Klein;Bremen;28359;Wiener StraÃŸe;1a;DE
+658;Lukas Vogel;Bremen;28197;Am Tabakquartier;62;DE
+659;Emma Meier;Twistringen;27239;Am Osterfeld;1;DE
+660;Ben Beck;Bremen;28359;Deliusweg;40;DE
+661;Jonas Schmidt;Bassum;27211;Richtweg;7a;DE
+662;Sophie Lorenz;Verden (Aller);27283;Adalbert-Stifter-StraÃŸe;15a;DE
+663;Amelie Roth;Bremen;28777;Farger StraÃŸe;100;DE
+664;Marlene Schmitz;Bremen;28217;Loxstedter StraÃŸe;1;DE
+665;Paul Fuchs;Elsfleth;26931;PeterstraÃŸe;73;DE
+666;Emilia Zimmermann;Elsfleth;26931;Huntorfer Weg;1;DE
+667;Paul Kaiser;Bremen;28207;Im Suhrfelde VI;2;DE
+668;Christian Schwarz;Bremen;28195;Rembertiring;4;DE
+669;Victoria Schulze;Verden (Aller);27283;LesumstraÃŸe;10;DE
+670;Jan Vogel;Bremen;28195;Ã–lmÃ¼hlenstraÃŸe;1;DE
+671;Jonas Lange;Verden (Aller);27283;GrÃ¼ne StraÃŸe;33;DE
+672;Emma Werner;Verden (Aller);27283;Borsteler DorfstraÃŸe;2;DE
+673;Julian Peters;Bremen;28755;Dobbheide;52;DE
+674;Paul Schwarz;Bremen;28237;Liegnitzplatz;1;DE
+675;Christian Schmitt;Bremen;28211;KirchbachstraÃŸe;206;DE
+676;Lars Richter;Bremen;28201;GellertstraÃŸe;133;DE
+677;Helena Beck;Bremen;28195;MartinistraÃŸe;70;DE
+678;Lars Schubert;Sulingen;27232;Hasseler Weg;25;DE
+679;Lars Meyer;Bremen;28279;FrÃ¼hlingsweg;15;DE
+680;Hannah Vogel;Hagen im Bremischen;27628;SchulstraÃŸe;1;DE
+681;Laura Walter;Loxstedt;27612;SchulstraÃŸe;47A;DE
+682;Nele Keller;Bremen;28329;Eislebener StraÃŸe;76;DE
+683;Felix Zimmermann;Hagen im Bremischen;27628;Diedrich-Steilen-StraÃŸe;2;DE
+684;Jan Frank;Bremen;28259;Oldenburger StraÃŸe;100;DE
+685;Anton Baumann;Bremen;28329;Eduard-Bernstein-StraÃŸe;1;DE
+686;Anton Roth;Bremen;28325;Ludwigshafener StraÃŸe;10;DE
+687;Emma Herrmann;Loxstedt;27612;BundesstraÃŸe;16;DE
+688;Tobias Günther;Bremen;28215;Utbremer Ring;117a;DE
+689;Mia Schulz;Bassum;27211;Syker StraÃŸe;6;DE
+690;Hannah Schmitt;Bremen;28213;ReinthalerstraÃŸe;17;DE
+691;Paul Günther;Kirchlinteln;27308;OstlandstraÃŸe;5a;DE
+692;Maximilian Hofmann;Bremen;28359;AchterstraÃŸe;7;DE
+693;Noah Mayer;Verden (Aller);27283;Bremer StraÃŸe;41;DE
+694;Julia Weiß;Geestland;27624;Hauptmann-BÃ¶se-StraÃŸe;19;DE
+695;Jonas Winkler;Bremen;28199;Duisburger StraÃŸe;4;DE
+696;Lisa Lange;Sottrum;27367;Everinghauser StraÃŸe;200;DE
+697;Leon Jung;Verden (Aller);27283;LudwigstraÃŸe;24;DE
+698;David Hofmann;Bremen;28279;Habenhauser Deichweg;39;DE
+699;Tobias Huber;Bremen;28217;NordstraÃŸe;347;DE
+700;Lisa Keller;Stadland;26935;Beckumer Siel;1;DE
+701;Julian Herrmann;Verden (Aller);27283;Eitzer DorfstraÃŸe;57;DE
+702;Niklas Keller;Bremen;28777;Rekumer StraÃŸe;20;DE
+703;Finn Kaiser;Bremen;28207;MalerstraÃŸe;37;DE
+704;Thomas Keller;Sulingen;27232;Galtener StraÃŸe;3;DE
+705;Leon Neumann;Bremen;28277;Theodor-Billroth-StraÃŸe;5;DE
+706;Theresa Schmidt;Bremen;28199;Kleine AnnenstraÃŸe;1;DE
+707;Franziska Schneider;Bremen;28219;Holsteiner StraÃŸe;123;DE
+708;Elias Schmidt;Worpswede;27726;MÃ¼hlendamm;3;DE
+709;Elias Lorenz;Kirchlinteln;27308;Zum Sportplatz;9;DE
+710;Lena Fischer;Bremen;28325;Engadiner StraÃŸe;72;DE
+711;Christian Möller;Bremen;28237;Posener StraÃŸe;37;DE
+712;Moritz Hofmann;Verden;27283;Bertha-Benz-StraÃŸe;9;DE
+713;Emma Berger;Bremen;28199;OberlÃ¤nder Hafen;1;DE
+714;Emma Schneider;Bremen;28211;Obernkirchener StraÃŸe;17;DE
+715;Jan Wolf;Bremen;28215;Ansbacher StraÃŸe;1;DE
+716;Amelie Beck;Bassum;27211;BahnhofstraÃŸe;15A;DE
+717;Christian Kaiser;Sulingen;27232;KampstraÃŸe;1;DE
+718;Ben Braun;Bremen;28215;Ahnewehrweg;24;DE
+719;Elias Lorenz;Osterholz-Scharmbeck;27711;WalkmÃ¼hlenweg;1;DE
+720;Lina Fischer;Bremen;28259;Norderoog;2;DE
+721;Simon Schubert;Bremen;28755;PezelstraÃŸe;27-29;DE
+722;Nele Berger;Bremen;28217;DorumstraÃŸe;23;DE
+723;Sophie Schmid;Bremen;28199;ElbstraÃŸe;03. Mai;DE
+724;David Frank;Bremen;28759;Auf dem Hohen Ufer;51;DE
+725;Moritz Roth;Osterholz-Scharmbeck;27711;SteubenstraÃŸe;1;DE
+726;Hannah Hartmann;Bremen;28279;Achtern HÃ¶ben;1;DE
+727;Marie Berger;Asendorf;27330;Hoyaer StraÃŸe;19;DE
+728;Elias Jung;Verden (Aller);27283;ClÃ¼versweg;4;DE
+729;Franziska Meier;Osterholz-Scharmbeck;27711;Hinter der Loge;4;DE
+730;Helena Schwarz;Verden;27283;WeitzmÃ¼hlener StraÃŸe;100;DE
+731;Lisa Meier;Bremen;28195;Domsheide;8;DE
+732;Hannah Schneider;Bremen;28215;MÃ¼nchener StraÃŸe;78;DE
+733;Franziska Krüger;Bremen;28215;CorveystraÃŸe;1;DE
+734;Leon König;Twistringen;27239;Hinterm Holze;10;DE
+735;Clara Möller;Bremen;28199;GroÃŸe SortillienstraÃŸe;Feb 18;DE
+736;Charlotte Herrmann;Bremen;28359;Anne-Conway-StraÃŸe;1;DE
+737;Lea Schmid;Kirchdorf;27245;Loge;2;DE
+738;Julian Fuchs;ReeÃŸum;27367;Eckstever Weg;2;DE
+739;Sophie Hofmann;Bremen;28215;KastanienstraÃŸe;88;DE
+740;Philipp Meyer;Hagen im Bremischen;27628;Am Steingrab;15;DE
+741;Simon Schwarz;Bremen;28215;NeukirchstraÃŸe;86;DE
+742;Niklas Baumann;Verden (Aller);27283;WilhelmstraÃŸe;1a;DE
+743;Erik Lorenz;Bremen;28755;Friedrich-SchrÃ¶der-StraÃŸe;1;DE
+744;Nele Möller;Bremen;28279;In der Laake;17;DE
+745;Johanna Neumann;Bremen;28759;Friedrich-Humbert-StraÃŸe;151;DE
+746;Tobias Meyer;Bremen;28307;Oberurseler StraÃŸe;2;DE
+747;Emma Wagner;Bremen;28325;Lachmundsdamm;41;DE
+748;Ben Köhler;Bremen;28211;Graf-Moltke-StraÃŸe;67;DE
+749;David Beck;Bremen;28777;LÃ¼ssumer Ring;50;DE
+750;Hannah Schröder;Bremen;28197;LadestraÃŸe;1;DE
+751;Johanna Maier;Verden (Aller);27283;Friedrich-Wolff-StraÃŸe;15;DE
+752;Mia Berger;Bremen;28199;Flughafenallee;21;DE
+753;Sophie Möller;Bremen;28207;InselstraÃŸe;44;DE
+754;Niklas Möller;Bremen;28219;FiegenstraÃŸe;46;DE
+755;Nele Schneider;Bremen;28201;Karl-Lerbs-StraÃŸe;72;DE
+756;Moritz Wagner;Osterholz-Scharmbeck;27711;Lilienweg;7;DE
+757;Clara Winkler;Bremen;28219;Borchersweg;11;DE
+758;Emilia Schmidt;Bremen;28279;Wehrweg;45b;DE
+759;Jan Lorenz;Bremen;28329;Philipp-Scheidemann-StraÃŸe;1;DE
+760;Tim Friedrich;Bremen;28195;FrÃ¼hlingstraÃŸe;10;DE
+761;Nele Schwarz;Bremen;28759;Campus Ring;1;DE
+762;Max Wagner;Bremen;28307;Vor dem Esch;29b;DE
+763;Finn Baumann;Twistringen;27239;FÃ¼rbringerstraÃŸe;8;DE
+764;Leonie Hofmann;Sottrum;27367;Am Meyerhofe;2;DE
+765;Nele Krause;Bremen;28277;Rumpelstilzchenweg;17;DE
+766;Elias Weiß;Geestland;27624;FliederstraÃŸe;1;DE
+767;Michael Hofmann;Twistringen;27239;Westerkamp;17;DE
+768;Marie Richter;Bremen;28755;LÃ¶hstraÃŸe;50;DE
+769;Paul Keller;Bremen;28359;Am Herzogenkamp;6a;DE
+770;Theresa Neumann;Bremen;28209;Am Barkhof;1;DE
+771;Lina Günther;Twistringen;27239;Glatzer StraÃŸe;3;DE
+772;Nele Herrmann;Bremen;28277;Soester StraÃŸe;23;DE
+773;David Becker;Ritterhude;27721;Osterhagener StraÃŸe;5c;DE
+774;Ben Winkler;Bremen;28209;WachmannstraÃŸe;16;DE
+775;Maximilian Lang;Geestland;27624;GrÃ¶pelinger StraÃŸe;8;DE
+776;Julian Meier;Verden (Aller);27283;MÃ¼hlenberg;16;DE
+777;Mia Herrmann;Bremen;28215;Erfurter StraÃŸe;49;DE
+778;Helena Kaiser;Verden (Aller);27283;BÃ¼rgermeister-Urban-StraÃŸe;8;DE
+779;Lukas Schwarz;ReeÃŸum;27367;Alter Schulhof;1;DE
+780;Johanna Fuchs;Bremen;28325;Davoser StraÃŸe;67-69;DE
+781;Tobias Lang;Bremen;28307;Julius-Faucher-StraÃŸe;26;DE
+782;Clara Beck;Bremen;28199;HohentorsheerstraÃŸe;17-19;DE
+783;Erik Keller;Loxstedt;27612;Tegelbreden;24;DE
+784;Johanna Scholz;Bremen;28215;Augsburger StraÃŸe;6;DE
+785;Jan Köhler;Verden (Aller);27283;StifthofstraÃŸe;1;DE
+786;Fabian Fuchs;BÃ¶tersen;27367;Am WeiÃŸen Berge;6;DE
+787;Alexander Hoffmann;Verden (Aller);27283;Lise-Meitner-Weg;10;DE
+788;Felix Weiß;Verden (Aller);27283;Achtern Hoff;42;DE
+789;Moritz Schmitz;Bremen;28279;SteinsetzerstraÃŸe;15;DE
+790;Lukas Mayer;Verden;27283;Am BÃ¼rgerpark;26;DE
+791;David Schmid;Bremen;28199;PappelstraÃŸe;94;DE
+792;David Friedrich;Geestland;27624;Brookhornsweg;1A;DE
+793;Isabel Schmitz;Twistringen;27239;Vor Harms Holt;38;DE
+794;Noah Scholz;Bremen;28211;WeiÃŸenburger StraÃŸe;53;DE
+795;Jan Wolf;Bremen;28195;BÃ¶ttcherstraÃŸe;4;DE
+796;Elias Meyer;Verden (Aller);27283;Trippelbarre;1a;DE
+797;Felix Krüger;Brake;26919;SÃ¼ddieksweg;14;DE
+798;Isabel Wagner;Osterholz-Scharmbeck;27711;Garteler Weg;34;DE
+799;Tobias Jung;Sulingen;27232;BismarckstraÃŸe;7;DE
+800;Anna Schubert;Vollersode;27729;VerlÃ¼ÃŸmoorer StraÃŸe;24;DE
+801;David Schneider;Bremen;28759;HasenhÃ¶ft;11;DE
+802;David Werner;Bremen;28199;Cornelius-Edzard-StraÃŸe;25;DE
+803;Niklas Beck;Bremen;28219;Lerchenweg;28;DE
+804;David Krause;Kirchlinteln;27308;Am Rathaus;1;DE
+805;Finn Müller;Twistringen;27239;BrunnenstraÃŸe;13;DE
+806;Anton Wagner;Osterholz-Scharmbeck;27711;PoststraÃŸe;8;DE
+807;Sophia Richter;Bremen;28195;PieperstraÃŸe;8;DE
+808;Mia Hahn;Bremen;28217;GustavstraÃŸe;1c;DE
+809;Amelie Lehmann;Bremen;28199;Am Neustadtsbahnhof;7;DE
+810;Leon Lang;Bremen;28279;Okeler StraÃŸe;25;DE
+811;Anton Herrmann;Verden;27283;Schnuckenstall;15;DE
+812;Laura Neumann;Osterholz-Scharmbeck;27711;Wandmachers Weg;11;DE
+813;Theresa Kaiser;Beverstedt;27616;Wollingster StraÃŸe;13;DE
+814;Lina Schubert;Twistringen;27239;Am Kiekbusch;10;DE
+815;Lena Hahn;Bruchhausen-Vilsen;27305;Lange StraÃŸe;2;DE
+816;David Weber;Hoya;27318;FeldstraÃŸe;30;DE
+817;Niklas Richter;Bremen;28307;Langenhainer StraÃŸe;1;DE
+818;Sophie Krüger;Osterholz-Scharmbeck;27711;Sodenweg;1;DE
+819;Lina Meyer;Bremen;28777;PÃ¶tjerweg;5b;DE
+820;Alexander Kaiser;Verden (Aller);27283;ElbestraÃŸe;18;DE
+821;Ben Maier;Bremen;28329;Greizer StraÃŸe;1;DE
+823;Philipp Huber;Bremen;28279;Karl-Marx-StraÃŸe;168c;DE
+824;Michael Schmitz;Bahrenborstel;27245;Alte DorfstraÃŸe;11;DE
+825;Sophia Friedrich;Bruchhausen-Vilsen;27305;Grafenweg;1;DE
+826;Erik Winkler;Verden (Aller);27283;Ziegeleiweg;33;DE
+827;Laura Fuchs;Verden (Aller);27283;Obere StraÃŸe;31;DE
+828;Tobias Jung;Bremen;28777;Kreinsloger;103;DE
+829;Julia Keller;Twistringen;27239;Molkereiweg;1;DE
+830;Amelie Weiß;Bremen;28207;HolunderstraÃŸe;112;DE
+831;Franziska Fischer;Bremen;28217;Herzogin-Cecilie-Allee;4b;DE
+832;Sarah Schulze;Bremen;28755;FÃ¤hrer KÃ¤mpe;72;DE
+833;Nele Hartmann;Kirchdorf;27245;Bahrenborsteler StraÃŸe;11;DE
+834;Moritz Schubert;Bremen;28219;BremervÃ¶rder StraÃŸe;2a;DE
+835;Charlotte Huber;Osterholz-Scharmbeck;27711;Am Kleingarten;6;DE
+836;Sebastian Müller;Bremen;28325;Auf der Schevemoorer Heide;53;DE
+837;Sarah Lang;Geestland;27624;Berghorn;7;DE
+838;Sebastian Lehmann;Rotenburg (WÃ¼mme);27356;Erika-KÃ¶ster-StraÃŸe;24;DE
+839;Alexander Kaiser;Twistringen;27239;Mittelwand;39;DE
+840;Finn Hartmann;Bremen;28719;An der Kleinen Geest;7;DE
+841;Lisa Meyer;Bremen;28219;LeutweinstraÃŸe;1;DE
+842;Marie Schmid;Bremen;28207;Plattenheide;21;DE
+843;Tobias Krause;Bremen;28325;Sankt-Gotthard-StraÃŸe;3;DE
+844;Nele Hofmann;Bremen;28201;Thedinghauser StraÃŸe;60;DE
+845;Marie Möller;VisselhÃ¶vede;27374;Heidmark;1;DE
+846;Alexander Schulze;Twistringen;27239;BÃ¼rgermeister-Holle-StraÃŸe;44;DE
+847;Katharina Walter;Bremen;28195;VietorstraÃŸe;25;DE
+848;Alexander Schmid;Bremen;28209;Parkallee;103a;DE
+849;Marlene Weber;Bremen;28217;NorderneystraÃŸe;10;DE
+850;Julian Köhler;Osterholz-Scharmbeck;27711;LindenstraÃŸe;55;DE
+851;Lea Meyer;Hagen im Bremischen;27628;Auf der Hollhorst;9;DE
+852;Julia Frank;Bremen;28197;Dangaster StraÃŸe;2;DE
+853;Nele Schulze;Twistringen;27239;Paul-Heyse-Ring;19;DE
+854;Sarah Hahn;Langwedel;27299;HauptstraÃŸe;85;DE
+855;Victoria Fuchs;Bremen;28195;LangenstraÃŸe;68;DE
+856;Helena Meyer;Bremen;28325;Osterholzer MÃ¶hlendamm;65;DE
+857;Charlotte Krüger;Twistringen;27239;GeorgstraÃŸe;15;DE
+858;Julian Berger;Kirchlinteln;27308;TurmstraÃŸe;10;DE
+859;Amelie Weiß;Verden (Aller);27283;Stumpeallee;12;DE
+860;Franziska Lang;Hagen im Bremischen;27628;Amtsdamm;86;DE
+861;Michael Vogel;Bruchhausen-Vilsen;27305;BergstraÃŸe;53;DE
+862;Greta Schulz;Verden (Aller);27283;Kohweidsweg;2A;DE
+863;Erik Werner;Bremen;28329;Carl-Severing-StraÃŸe;10;DE
+864;Elias Jung;Bassum;27211;Am Gaswerk;8;DE
+865;Moritz Schubert;Bremen;28209;BenquestraÃŸe;49;DE
+866;Philipp Roth;Osterholz-Scharmbeck;27711;RingstraÃŸe;5;DE
+867;Franziska Maier;Bremen;28277;MÃ¼nsterstraÃŸe;26;DE
+868;Sophia Berger;Bremen;28217;Auf dem Kamp;10;DE
+869;Julia Neumann;Bremen;28717;BlauholzmÃ¼hle;25;DE
+870;Theresa Mayer;Bremen;28209;HohenlohestraÃŸe;60;DE
+871;Sebastian Roth;Bremen;28755;LindenstraÃŸe;52;DE
+872;Mia Lehmann;Kirchlinteln;27308;Verdener StraÃŸe;1;DE
+873;Laura Peters;Bremen;28215;Meraner StraÃŸe;1;DE
+874;Sophie Richter;Verden (Aller);27283;Berliner Ring;7;DE
+875;Jan Hartmann;Bremen;28201;HegelstraÃŸe;75;DE
+876;Tobias Kaiser;Bremen;28195;Herdentorsteinweg;49;DE
+877;Isabel Meier;Bassum;27211;Am Kirchhof;1;DE
+878;Thomas Schubert;Bremen;28195;Hanseatenhof;8;DE
+879;Marlene Weber;Langwedel;27299;Am SchloÃŸgarten;4g;DE
+880;Sarah Zimmermann;Martfeld;27327;Ortende;5;DE
+881;Philipp Wagner;Bremen;28197;Goosekamp;1a;DE
+882;Michael Wagner;Bremen;28195;Altenwall;1;DE
+883;Julian Berger;Worpswede;27726;Am SchÃ¼tzenhof;1A;DE
+884;Victoria Berger;Asendorf;27330;Altenfelder Weg;4;DE
+885;Charlotte Hartmann;Bremen;28195;Kleine Helle;51;DE
+886;Victoria Weiß;Bremen;28217;Kommodore-Johnsen-Boulevard;2;DE
+887;Fabian Frank;ReeÃŸum;27367;Schlippenmoorweg;3;DE
+888;Fabian Lang;Loxstedt;27612;Hohewurth;37b;DE
+889;Elias Keller;Bremen;28195;SandstraÃŸe;12;DE
+890;Anton Braun;Bremen;28329;Amelinghauser StraÃŸe;19;DE
+891;Sophie Schulze;Bremen;28195;AnsgaritorswallstraÃŸe;16;DE
+892;Sarah Jung;Osterholz-Scharmbeck;27711;KÃ¤the-Kollwitz-StraÃŸe;78;DE
+893;Alexander Huber;Sulingen;27232;Von-Moltke-StraÃŸe;4;DE
+894;Clara Hahn;Bremen;28201;Neustadtscontrescarpe;32;DE
+895;Lisa Becker;Bremen;28217;Johann-Bornemacher-StraÃŸe;24;DE
+896;Emma Maier;Verden (Aller);27283;Hamburger StraÃŸe;32;DE
+897;Julia Herrmann;Twistringen;27239;Kurze StraÃŸe;6A;DE
+898;Helena Hartmann;Bremen;28219;Apenrader StraÃŸe;13;DE
+899;Franziska Walter;Bremen;28195;WÃ¼stestÃ¤tte;11;DE
+900;Greta Wolf;Verden (Aller);27283;FriedrichstraÃŸe;1;DE
+901;Philipp Weiß;Sulingen;27232;Anne-Frank-StraÃŸe;38;DE
+902;Franziska Krause;Rotenburg;27356;Immentun;1;DE
+903;Marie Krause;Asendorf;27330;Alte HeerstraÃŸe;57A;DE
+904;Franziska Krüger;Bremen;28195;BalgebrÃ¼ckstraÃŸe;5;DE
+905;Michael Hofmann;Bremen;28195;BredenstraÃŸe;2;DE
+906;Johanna Lorenz;Bremen;28211;ScharnhorststraÃŸe;161;DE
+907;Max Köhler;Beverstedt;27616;HauptstraÃŸe;97;DE
+908;Lea Schulz;Martfeld;27327;Alte Bremer StraÃŸe;1;DE
+909;Amelie Schröder;Bremen;28219;Erikaweg;1;DE
+910;Max Lehmann;Worpswede;27726;Bauernreihe;8b;DE
+911;Jan Krüger;Bremen;28329;Vahrer StraÃŸe;273a;DE
+912;Johanna Huber;Bremen;28755;VereinsstraÃŸe;8;DE
+913;Fabian Beck;Bremen;28219;Asternweg;1;DE
+914;David Hofmann;Osterholz-Scharmbeck;27711;Westerbecker StraÃŸe;2a;DE
+915;Johanna Friedrich;Bruchhausen-Vilsen;27305;An der MÃ¼hlenheide;8;DE
+916;Felix Köhler;Twistringen;27239;PoststraÃŸe;1;DE
+917;Maximilian Kaiser;Sulingen;27232;Stettiner StraÃŸe;12;DE
+918;Tim Scholz;Kirchlinteln;27308;Brammer DorfstraÃŸe;5;DE
+919;Jonas Schmitz;Bremen;28217;BÃ¼rgermeister-Deichmann-StraÃŸe;11;DE
+920;Franziska Schulze;Bremen;28213;CrÃ¼semannallee;2;DE
+921;Moritz Jung;Bremen;28325;Sankt-Moritz-StraÃŸe;1;DE
+922;Jan Hofmann;Geestland;27624;Dobbendeel;1;DE
+923;Julia Keller;Bremen;28201;YorckstraÃŸe;2;DE
+924;Felix Schmitt;Bremen;28211;Rosemarie-Pohl-Weber-StraÃŸe;20;DE
+925;Julian Lorenz;Bremen;28307;Sudwalder StraÃŸe;61;DE
+926;Max Meyer;Kirchlinteln;27308;Sprenkampsweg;22;DE
+927;Clara Jung;Twistringen;27239;Theodor-Fontane-StraÃŸe;2;DE
+928;Max Möller;Bremen;28307;Mahndorfer HeerstraÃŸe;105;DE
+929;Anton Schubert;Bremen;28777;RÃ¶nnebecker StraÃŸe;1c;DE
+930;Julia Günther;Bremen;28279;Grasweg;2;DE
+931;Elias Herrmann;Loxstedt;27612;Wilhelm-Raabe-StraÃŸe;4b;DE
+932;David Schulze;Bremen;28759;Grohner Gartenweg;2a;DE
+933;Christian Zimmermann;Bassum;27211;Erich-KÃ¤stner-StraÃŸe;1;DE
+934;Leonie Fischer;Bremen;28195;LÃ¶ningstraÃŸe;31;DE
+935;Finn Fischer;Bremen;28201;Dannhausenweg;44;DE
+936;Tobias Hahn;Bremen;28307;Osterholzer DorfstraÃŸe;20;DE
+937;Emilia Schubert;Bremen;28359;UniversitÃ¤ts-Boulevard;13;DE
+938;Charlotte Weber;Bremen;28209;LortzingstraÃŸe;1;DE
+939;Laura Hoffmann;Bremen;28195;MarktstraÃŸe;6;DE
+940;Sarah Schmid;Sulingen;27232;Berliner StraÃŸe;91;DE
+941;Michael Meyer;Bremen;28217;ReuterstraÃŸe;9;DE
+942;Lena Winkler;Verden (Aller);27283;BirkenstraÃŸe;11;DE
+943;Isabel Maier;Bremen;28279;Weserweg;13;DE
+944;Katharina Herrmann;Bremen;28329;Nordhauser StraÃŸe;1;DE
+945;Felix Schmidt;Verden (Aller);27283;Karoline-Herschel-StraÃŸe;1;DE
+946;Finn Maier;Kirchwalsede;27386;Im Dorf;17;DE
+947;Katharina Neumann;Bremen;28237;Hirschberger StraÃŸe;27;DE
+948;Julia Wolf;Sulingen;27232;Bassumer StraÃŸe;83;DE
+949;Katharina Frank;Bremen;28215;Katrepeler StraÃŸe;96;DE
+950;Sebastian Meyer;Bremen;28195;Hinter dem SchÃ¼tting;11;DE
+951;Moritz Lehmann;Geestland;27624;Am Osterberg;4;DE
+952;Sophia Krüger;Beverstedt;27616;Wollingster DorfstraÃŸe;13;DE
+953;Paul Keller;Bremen;28201;RasingstraÃŸe;29;DE
+954;Philipp Schmidt;Verden (Aller);27283;Am Allerhang;24;DE
+955;Sebastian Kaiser;Twistringen;27239;KolpingstraÃŸe;7;DE
+956;Anna Winkler;Bremen;28215;Ricarda-Huch-StraÃŸe;2;DE
+957;Sebastian Möller;Bremen;28195;Am Dom;6;DE
+958;Jonas Schröder;Bremen;28259;Hohenhorster Weg;63a;DE
+959;Marlene Schmidt;Rotenburg (WÃ¼mme);27356;GroÃŸe StraÃŸe;21a;DE
+960;Franziska Peters;Bremen;28197;Am Gaswerk;1;DE
+961;David Lehmann;Bremen;28279;Habenhauser DorfstraÃŸe;17;DE
+962;Thomas Keller;Osterholz-Scharmbeck;27711;HeidkampstraÃŸe;14;DE
+963;Finn Hoffmann;Verden (Aller);27283;Alma-Rogge-Weg;6;DE
+964;Jonas Wolf;Bremen;28199;OderstraÃŸe;126;DE
+965;Philipp Neumann;Bremen;28209;LÃ¼der-von-Bentheim-StraÃŸe;8a;DE
+966;Nele Mayer;Bremen;28211;Heinrich-Heine-StraÃŸe;52;DE
+967;Simon Lehmann;Bremen;28329;Stadtrodaer Weg;1;DE
+968;Anton Günther;Twistringen;27239;GrenzstraÃŸe;37A;DE
+969;Thomas Becker;Bremen;28217;Ludwig-Franzius-Platz;7;DE
+970;Max Winkler;Bremen;28359;Mary-Astell-StraÃŸe;10;DE
+971;Fabian Braun;Bremen;28219;Elsflether StraÃŸe;29a;DE
+972;Isabel Fischer;Bremen;28717;Alter Kirchweg;7;DE
+973;Theresa Herrmann;Bremen;28217;Eduard-Schopf-Allee;1a;DE
+974;Max Huber;Ritterhude;27721;RosenhÃ¼gel;5;DE
+975;Sophie Braun;Verden;27283;Hans-Joachim-KÃ¶hler-Allee;45;DE
+976;Michael Neumann;Twistringen;27239;Steller StraÃŸe;32;DE
+977;Noah Schmitz;Bremen;28207;DÃ¶lvesstraÃŸe;8;DE
+978;Amelie Mayer;Bremen;28717;Burgdammer Ring;68;DE
+979;Fabian Vogel;Bremen;28197;Rechtenflether StraÃŸe;1a;DE
+980;Thomas Schmidt;Osterholz-Scharmbeck;27711;Am Deich;9a;DE
+981;Isabel Werner;Bremen;28259;LeerkÃ¤mpe;7;DE
+982;Isabel Krüger;Bremen;28279;WehrstraÃŸe;175;DE
+983;David Berger;Osterholz-Scharmbeck;27711;RÃ¼bhofstraÃŸe;12c;DE
+984;Thomas Hahn;Horstedt;27367;HauptstraÃŸe;13;DE
+985;Nele Schubert;Osterholz-Scharmbeck;27711;Schwaneweder StraÃŸe;19;DE
+986;Leon König;Bremen;28195;FalkenstraÃŸe;7;DE
+987;Sebastian Köhler;Bremen;28219;Veilchenweg;11;DE
+988;Moritz Wagner;Beverstedt;27616;Appelner StraÃŸe;72a;DE
+989;Nele Klein;Bremen;28719;Ellerbuschort;14;DE
+990;Paul Scholz;Brake;26919;Schrabberdeich;2;DE
+991;Julian Schröder;Loxstedt;27612;Lindenallee;86;DE
+992;Mia Frank;Osterholz-Scharmbeck;27711;Bernhard-Hoetger-StraÃŸe;5;DE
+993;Alexander Schröder;Bremen;28195;WandschneiderstraÃŸe;6;DE
+994;Marie Hoffmann;Osterholz-Scharmbeck;27711;Im Horstmoor;44;DE
+995;Katharina Möller;Twistringen;27239;MÃ¶rsener Kirchweg;14;DE
+996;Simon Weiß;Bremen;28197;Visbeker StraÃŸe;12;DE
+997;Lina Schmitt;Bremen;28325;Osterholzer HeerstraÃŸe;162a;DE
+998;Elias Hartmann;Bassum;27211;Freidorf;7;DE
+999;Anton Weiß;Bremen;28207;Insterburger StraÃŸe;10;DE
+1002;Lars Hahn;Worpswede;27726;Totenweg;2a;DE
+1003;Lena Krause;Brake;26919;Harrier StraÃŸe;12;DE
+1004;Finn Müller;Bremen;28215;BuddestraÃŸe;1a;DE
+1005;Niklas Richter;Rotenburg (WÃ¼mme);27356;FuhrenstraÃŸe;21;DE
+1006;Anna Günther;Verden (Aller);27283;JahnstraÃŸe;6;DE
+1007;Lea Schubert;Verden;27283;HauptstraÃŸe;79;DE
+1008;Christian Günther;Bremen;28217;HansestraÃŸe;17;DE
+1009;Anton Schmitz;Verden (Aller);27283;ZiegeleistraÃŸe;2;DE
+1010;Paul Hofmann;Langwedel;27299;Ortfeld;22a;DE
+1012;Lina Baumann;Bassum;27211;HauptstraÃŸe;12;DE
+1013;Julian Schmitz;Bremen;28219;AuguststraÃŸe;52;DE
+1014;Julian Lehmann;Loxstedt;27612;Eichenallee;72;DE
+1015;Fabian Berger;Kirchlinteln;27308;Neddener DorfstraÃŸe;33;DE
+1016;Tim Walter;Bremen;28197;Zwischenahner StraÃŸe;1;DE
+1017;Marie Scholz;Beverstedt;27616;Vorm Dorfe;41;DE
+1018;Lukas Weber;Sulingen;27232;Kurze StraÃŸe;4;DE
+1019;Lena Peters;Twistringen;27239;An der Sandkuhle;19;DE
+1020;Simon Braun;Hagen im Bremischen;27628;Zum Weserblick;9;DE
+1021;Emilia Schneider;Beverstedt;27616;Beverstedter StraÃŸe;19;DE
+1022;Philipp Schubert;Osterholz-Scharmbeck;27711;Laubenweg;18;DE
+1023;Paul Peters;Bremen;28277;Niedersachsendamm;1;DE
+1024;Felix Mayer;Verden (Aller);27283;WindmÃ¼hlenstraÃŸe;17;DE
+1025;Thomas Hoffmann;Verden (Aller);27283;Klaus-Groth-StraÃŸe;11;DE
+1026;Sebastian Schmitz;Bremen;28213;Schwachhauser Ring;1a;DE
+1027;Ben Frank;Bremen;28195;KnochenhauerstraÃŸe;12;DE
+1028;Max Maier;Bremen;28199;Claudius-Dornier-StraÃŸe;15;DE
+1029;Anna Krause;Verden (Aller);27283;Im Burgfeld;3;DE
+1030;Felix Maier;Bremen;28219;Bremerhavener StraÃŸe;104;DE
+1031;Lea Meyer;Bremen;28209;BulthauptstraÃŸe;1a;DE
+1032;Jan Braun;Bremen;28717;Pastor-Diehl-StraÃŸe;9a;DE
+1033;Fabian Müller;Bremen;28195;AnsgaritorstraÃŸe;16-20;DE
+1034;Emma Werner;Bremen;28325;Bultenweg;3;DE
+1035;Greta Becker;Kirchlinteln;27308;Luttumer DorfstraÃŸe;19;DE
+1036;Julia Weiß;Kirchlinteln;27308;Zum Lindhoop;15;DE
+1037;Alexander Huber;Bremen;28211;Charlottenburger StraÃŸe;11;DE
+1038;Greta Neumann;Bremen;28307;Zum Panrepel;1;DE
+1039;Max Weiß;Bremen;28217;ColumbusstraÃŸe;84;DE
+1040;Max Friedrich;Bremen;28207;OsnabrÃ¼cker StraÃŸe;24;DE
+1041;Katharina Schneider;Worpswede;27726;Martha-Vogeler-StraÃŸe;11;DE
+1042;Anton Becker;Bremen;28195;KatharinenstraÃŸe;35;DE
+1043;Marie Berger;Verden;27283;WaterloostraÃŸe;1;DE
+1044;Amelie Schmid;Bremen;28259;Alter Dorfweg;30;DE
+1045;Julia Frank;Bremen;28359;Linzer StraÃŸe;10;DE
+1046;Jan Frank;Bremen;28217;LloydstraÃŸe;6;DE
+1047;Katharina Weiß;Bremen;28195;GroÃŸe WeidestraÃŸe;1;DE
+1048;Emma Kaiser;Hoya;27318;HertzstraÃŸe;14;DE
+1049;Sophia Krause;Rotenburg;27356;Am Lerchenkrug;3;DE
+1050;Christian Wolf;Bremen;28237;Hermann-PrÃ¼ser-StraÃŸe;3;DE
+1051;Elias Schmitt;Twistringen;27239;ZiegelstraÃŸe;7A;DE
+1052;Nele Lorenz;Bremen;28195;NeuenstraÃŸe;16;DE
