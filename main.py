@@ -94,6 +94,53 @@ def main() -> None:
         finally:
             session.close()
 
+    elif command == "train-models":
+        init_db()
+        from app.ml.training import run_training
+        cache_dir = Path(__file__).parent / "data" / "ml_cache"
+        cache_path = cache_dir / "ml_dataset.parquet"
+        try:
+            result = run_training(session=None, cache_path=cache_path, use_cache=False)
+            logger.info("Models saved: %s, %s", result["emission_path"], result["load_path"])
+        except Exception:
+            logger.exception("Training failed")
+            raise
+
+    elif command == "simulate":
+        init_db()
+        args = sys.argv[2:]
+        order_id = None
+        for i, a in enumerate(args):
+            if a in ("--order", "-o") and i + 1 < len(args):
+                try:
+                    order_id = int(args[i + 1])
+                    break
+                except ValueError:
+                    pass
+        alt_type = "Truck"
+        for i, a in enumerate(args):
+            if a == "--vehicle-type" and i + 1 < len(args):
+                alt_type = args[i + 1]
+                break
+        if order_id is None:
+            logger.error("Usage: python main.py simulate --order <order_id> [--vehicle-type <type>]")
+            sys.exit(1)
+        from app.ml.simulator import simulate_order
+        session = SessionLocal()
+        try:
+            out = simulate_order(session, order_id, alt_type)
+            if out.get("error"):
+                logger.warning(out["error"])
+                if out.get("available_types"):
+                    print("Available vehicle types:", ", ".join(out["available_types"]))
+            else:
+                print(f"Order {out['order_id']}: current CO2 {out['current_predicted_co2']:.2f} kg, "
+                      f"alternative {out['alternative_predicted_co2']:.2f} kg, "
+                      f"CO2 savings {out['co2_savings_percent']:.1f}%, "
+                      f"utilization change {out['utilization_improvement']:+.3f}")
+        finally:
+            session.close()
+
     else:
         print(
             "Usage:\n"
@@ -101,6 +148,8 @@ def main() -> None:
             "  python main.py ingest [data_dir] [--replace]  Load CSVs (--replace truncates first)\n"
             "  python main.py build-facts                    Build transport_stage_fact and views\n"
             "  python main.py analytics-report               Print key analytics KPIs\n"
+            "  python main.py train-models                   Train emission and load ML models\n"
+            "  python main.py simulate --order <id> [--vehicle-type <type>]  What-if simulation\n"
         )
 
 
