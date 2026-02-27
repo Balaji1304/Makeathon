@@ -1,0 +1,33 @@
+app\optimization\scoring.py:4: error: Library stubs not installed for "pandas"  [import-untyped]
+app\optimization\consolidation.py:5: error: Library stubs not installed for "pandas"  [import-untyped]
+app\ml\inference.py:8: error: Library stubs not installed for "pandas"  [import-untyped]
+app\ml\inference.py:19: error: Skipping analyzing "joblib": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+app\database\connection.py:36: error: Argument 1 to "create_engine" has incompatible type "str | None"; expected "str | URL"  [arg-type]
+app\database\models.py:251: error: Function "uuid.uuid4" is not valid as a type  [valid-type]
+app\database\models.py:251: note: Perhaps you need "Callable[...]" or a callback protocol?
+app\services\analytics_service.py:4: error: Library stubs not installed for "pandas"  [import-untyped]
+app\optimization\simulation.py:5: error: Library stubs not installed for "pandas"  [import-untyped]
+app\ml\features.py:8: error: Library stubs not installed for "pandas"  [import-untyped]
+app\ingestion\csv_loader.py:5: error: Library stubs not installed for "pandas"  [import-untyped]
+app\ingestion\csv_loader.py:5: note: Hint: "python3 -m pip install pandas-stubs"
+app\ingestion\csv_loader.py:5: note: (or run "mypy --install-types" to install all missing stub packages)
+app\ingestion\csv_loader.py:5: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+app\ingestion\csv_loader.py:190: error: Argument 1 to "bulk_insert_mappings" of "Session" has incompatible type "type[Address]"; expected "Mapper[Any]"  [arg-type]
+app\ingestion\csv_loader.py:282: error: Need type annotation for "mot_to_vehicle" (hint: "mot_to_vehicle: dict[<type>, <type>] = ...")  [var-annotated]
+app\ingestion\csv_loader.py:420: error: Argument 1 to "bulk_insert_mappings" of "Session" has incompatible type "type"; expected "Mapper[Any]"  [arg-type]
+app\ingestion\csv_loader.py:436: error: "type" has no attribute "__tablename__"; maybe "__qualname__" or "__name__"?  [attr-defined]
+app\ingestion\csv_loader.py:449: error: "type" has no attribute "__tablename__"; maybe "__qualname__" or "__name__"?  [attr-defined]
+app\ingestion\csv_loader.py:489: error: "type" has no attribute "__tablename__"; maybe "__qualname__" or "__name__"?  [attr-defined]
+app\services\optimization_service.py:4: error: Library stubs not installed for "pandas"  [import-untyped]
+app\recommendation\engine.py:8: error: Library stubs not installed for "pandas"  [import-untyped]
+app\recommendation\engine.py:99: error: Unsupported operand type for unary - ("object")  [operator]
+app\ml\simulator.py:8: error: Library stubs not installed for "pandas"  [import-untyped]
+app\ml\dataset.py:8: error: Library stubs not installed for "pandas"  [import-untyped]
+app\ml\dataset.py:55: error: Skipping analyzing "sklearn.model_selection": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+app\ml\training.py:8: error: Skipping analyzing "joblib": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+app\ml\training.py:9: error: Library stubs not installed for "pandas"  [import-untyped]
+app\ml\training.py:10: error: Skipping analyzing "sklearn.ensemble": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+app\ml\training.py:11: error: Skipping analyzing "sklearn.pipeline": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+app\ml\training.py:12: error: Skipping analyzing "sklearn.preprocessing": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+app\ml\training.py:41: error: Skipping analyzing "sklearn.metrics": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+Found 28 errors in 14 files (checked 40 source files)

@@ -33,7 +33,7 @@ def get_db():
 
 
 def _grant_public_schema_via_admin() -> None:
-    admin = create_engine(settings.admin_database_url, isolation_level="AUTOCOMMIT")
+    admin = create_engine(str(settings.admin_database_url), isolation_level="AUTOCOMMIT")
     user, db = settings.db_user, settings.db_name
     with admin.connect() as conn:
         conn.execute(text(f'GRANT ALL ON SCHEMA public TO "{user}"'))

@@ -12,7 +12,6 @@ from app.ml.features import (
     FEATURE_COLS_EMISSION,
     FEATURE_COLS_LOAD,
     TARGET_CO2,
-    TARGET_LOAD,
     build_features_from_session,
 )
 

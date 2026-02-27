@@ -5,7 +5,6 @@ predicted emissions, CO2 savings %, utilization improvement using ML predictions
 import logging
 from typing import Any, Dict, Optional
 
-import pandas as pd
 from sqlalchemy.orm import Session
 
 from app.database.models import TransportType, VehicleAttributes

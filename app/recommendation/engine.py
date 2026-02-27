@@ -96,5 +96,5 @@ def generate_recommendations(
             "estimated_co2_reduction": round(est_reduction, 2),
         })
 
-    out.sort(key=lambda x: -x["priority_score"])
+    out.sort(key=lambda x: float(x["priority_score"]), reverse=True)
     return out[:top_n]

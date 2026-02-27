@@ -3,7 +3,7 @@ Load trained models and return predicted_co2 and predicted_load_ratio for given 
 """
 import logging
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 
 import pandas as pd
 

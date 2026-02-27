@@ -15,7 +15,6 @@ from app.database.models import (
     FreightUnit,
     FreightUnitStop,
     FreightOrder,
-    FreightOrderItem,
     FreightOrderStop,
     FreightOrderStage,
 )

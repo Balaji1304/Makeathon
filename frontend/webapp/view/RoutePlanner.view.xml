@@ -1,0 +1,288 @@
+<mvc:View
+    controllerName="greentrack.controller.RoutePlanner"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:card="sap.f.cards"
+    xmlns:form="sap.ui.layout.form">
+    
+    <Page title="Route Planning" class="sapUiResponsiveContentPadding">
+        <customHeader>
+            <Toolbar>
+                <Title text="Route Planning &amp; Optimization" />
+                <ToolbarSpacer />
+                <Button 
+                    text="New Route" 
+                    type="Emphasized" 
+                    icon="sap-icon://add" 
+                    press="onCreateRoute" />
+            </Toolbar>
+        </customHeader>
+        
+        <content>
+            <l:Splitter height="calc(100vh - 8rem)">
+                <!-- Left Panel - Route List -->
+                <l:contentAreas>
+                    <l:SplitterLayoutData size="400px" />
+                    <VBox class="sapUiSmallMargin">
+                        <Toolbar>
+                            <SearchField 
+                                placeholder="Search routes..." 
+                                width="100%"
+                                search="onSearchRoutes" />
+                        </Toolbar>
+                        
+                        <List
+                            id="routeList"
+                            items="{/Routes}"
+                            mode="SingleSelectMaster"
+                            selectionChange="onRouteSelect"
+                            growing="true"
+                            growingThreshold="20">
+                            <CustomListItem type="Active">
+                                <VBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom">
+                                    <HBox justifyContent="SpaceBetween" alignItems="Center">
+                                        <VBox>
+                                            <Title text="{RouteID}" level="H5" />
+                                            <Text text="{RouteName}" class="sapUiTinyMarginTop" />
+                                        </VBox>
+                                        <ObjectStatus 
+                                            text="{Status}" 
+                                            state="{
+                                                path: 'Status',
+                                                formatter: '.formatRouteStatus'
+                                            }" />
+                                    </HBox>
+                                    
+                                    <HBox class="sapUiTinyMarginTop" justifyContent="SpaceBetween">
+                                        <HBox>
+                                            <core:Icon src="sap-icon://journey-arrive" class="sapUiTinyMarginEnd" />
+                                            <Text text="{Distance} km" />
+                                        </HBox>
+                                        <HBox>
+                                            <core:Icon src="sap-icon://history" class="sapUiTinyMarginEnd" />
+                                            <Text text="{Duration}" />
+                                        </HBox>
+                                        <HBox>
+                                            <core:Icon 
+                                                src="sap-icon://customer-and-supplier" 
+                                                color="{
+                                                    path: 'EmissionLevel',
+                                                    formatter: '.formatEmissionColor'
+                                                }"
+                                                class="sapUiTinyMarginEnd" />
+                                            <ObjectNumber 
+                                                number="{CO2Emissions}" 
+                                                unit="kg"
+                                                state="{
+                                                    path: 'EmissionLevel',
+                                                    formatter: '.formatEmissionState'
+                                                }" />
+                                        </HBox>
+                                    </HBox>
+                                </VBox>
+                            </CustomListItem>
+                        </List>
+                    </VBox>
+                </l:contentAreas>
+                
+                <!-- Right Panel - Route Details -->
+                <l:contentAreas>
+                    <VBox class="sapUiSmallMargin">
+                        <f:Card class="sapUiSmallMarginBottom">
+                            <f:header>
+                                <card:Header 
+                                    title="Route Details"
+                                    subtitle="{selectedRoute>/RouteID}">
+                                    <card:actions>
+                                        <Button 
+                                            icon="sap-icon://edit" 
+                                            type="Transparent"
+                                            press="onEditRoute" />
+                                        <Button 
+                                            icon="sap-icon://delete" 
+                                            type="Transparent"
+                                            press="onDeleteRoute" />
+                                    </card:actions>
+                                </card:Header>
+                            </f:header>
+                            
+                            <f:content>
+                                <VBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom">
+                                    <!-- Map Placeholder -->
+                                    <VBox 
+                                        height="300px" 
+                                        justifyContent="Center" 
+                                        alignItems="Center"
+                                        class="sapUiSmallMarginBottom"
+                                        backgroundDesign="Solid">
+                                        <core:Icon 
+                                            src="sap-icon://map-2" 
+                                            size="3rem"
+                                            color="#666" />
+                                        <Text 
+                                            text="Map Visualization Area" 
+                                            class="sapUiTinyMarginTop" />
+                                        <Text 
+                                            text="(Integrate with your preferred mapping service)" 
+                                            class="sapUiTinyMarginTop" />
+                                    </VBox>
+                                    
+                                    <!-- Route Information Grid -->
+                                    <l:Grid 
+                                        defaultSpan="L6 M6 S12"
+                                        class="sapUiSmallMarginBottom">
+                                        <VBox>
+                                            <Label text="Distance" />
+                                            <ObjectNumber 
+                                                number="{selectedRoute>/Distance}" 
+                                                unit="km"
+                                                emphasized="true" />
+                                        </VBox>
+                                        <VBox>
+                                            <Label text="Duration" />
+                                            <Text 
+                                                text="{selectedRoute>/Duration}" 
+                                                class="sapUiMediumMarginTop" />
+                                        </VBox>
+                                        <VBox>
+                                            <Label text="CO₂ Emissions" />
+                                            <ObjectNumber 
+                                                number="{selectedRoute>/CO2Emissions}" 
+                                                unit="kg"
+                                                state="{
+                                                    path: 'selectedRoute>/EmissionLevel',
+                                                    formatter: '.formatEmissionState'
+                                                }" />
+                                        </VBox>
+                                        <VBox>
+                                            <Label text="Fuel Cost" />
+                                            <ObjectNumber 
+                                                number="{selectedRoute>/FuelCost}" 
+                                                unit="EUR" />
+                                        </VBox>
+                                    </l:Grid>
+                                    
+                                    <!-- Vehicle Assignment -->
+                                    <VBox class="sapUiSmallMarginBottom">
+                                        <Label text="Assigned Vehicle" />
+                                        <HBox alignItems="Center" class="sapUiTinyMarginTop">
+                                            <core:Icon 
+                                                src="sap-icon://vehicle-shipping" 
+                                                class="sapUiTinyMarginEnd" />
+                                            <Text text="{selectedRoute>/AssignedVehicle}" />
+                                            <Button 
+                                                text="Change" 
+                                                type="Transparent"
+                                                press="onChangeVehicle"
+                                                class="sapUiTinyMarginBegin" />
+                                        </HBox>
+                                    </VBox>
+                                    
+                                    <!-- Optimization Options -->
+                                    <VBox class="sapUiSmallMarginBottom">
+                                        <Label text="Route Optimization" />
+                                        <HBox class="sapUiTinyMarginTop">
+                                            <SegmentedButton 
+                                                selectedKey="{selectedRoute>/OptimizationMode}"
+                                                selectionChange="onOptimizationChange">
+                                                <items>
+                                                    <SegmentedButtonItem 
+                                                        key="fastest" 
+                                                        icon="sap-icon://history"
+                                                        text="Fastest" />
+                                                    <SegmentedButtonItem 
+                                                        key="shortest" 
+                                                        icon="sap-icon://navigation-down-arrow"
+                                                        text="Shortest" />
+                                                    <SegmentedButtonItem 
+                                                        key="eco" 
+                                                        icon="sap-icon://wound-doc"
+                                                        text="Eco" />
+                                                </items>
+                                            </SegmentedButton>
+                                        </HBox>
+                                    </VBox>
+                                </VBox>
+                            </f:content>
+                        </f:Card>
+                        
+                        <!-- Waypoints/Stops Card -->
+                        <f:Card>
+                            <f:header>
+                                <card:Header title="Waypoints &amp; Stops">
+                                    <card:actions>
+                                        <Button 
+                                            icon="sap-icon://add" 
+                                            type="Transparent"
+                                            press="onAddWaypoint" />
+                                    </card:actions>
+                                </card:Header>
+                            </f:header>
+                            
+                            <f:content>
+                                <List
+                                    items="{selectedRoute>/Waypoints}"
+                                    noDataText="No waypoints defined">
+                                    <CustomListItem>
+                                        <HBox 
+                                            justifyContent="SpaceBetween" 
+                                            alignItems="Center"
+                                            width="100%"
+                                            class="sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom">
+                                            <HBox alignItems="Center">
+                                                <core:Icon 
+                                                    src="{
+                                                        path: 'Type',
+                                                        formatter: '.formatWaypointIcon'
+                                                    }" 
+                                                    class="sapUiMediumMarginEnd" />
+                                                <VBox>
+                                                    <Title text="{Location}" level="H6" />
+                                                    <Text text="{Address}" class="sapUiTinyMarginTop" />
+                                                    <HBox class="sapUiTinyMarginTop">
+                                                        <Text text="ETA: {ETA}" />
+                                                        <Text 
+                                                            text=" • Duration: {StopDuration}" 
+                                                            class="sapUiTinyMarginBegin" />
+                                                    </HBox>
+                                                </VBox>
+                                            </HBox>
+                                            <HBox>
+                                                <Button 
+                                                    icon="sap-icon://navigation-up-arrow" 
+                                                    type="Transparent"
+                                                    press="onMoveWaypointUp" />
+                                                <Button 
+                                                    icon="sap-icon://navigation-down-arrow" 
+                                                    type="Transparent"
+                                                    press="onMoveWaypointDown" />
+                                                <Button 
+                                                    icon="sap-icon://delete" 
+                                                    type="Transparent"
+                                                    press="onDeleteWaypoint" />
+                                            </HBox>
+                                        </HBox>
+                                    </CustomListItem>
+                                </List>
+                            </f:content>
+                        </f:Card>
+                    </VBox>
+                </l:contentAreas>
+            </l:Splitter>
+        </content>
+        
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button text="Cancel" press="onCancel" />
+                <Button 
+                    text="Save Route" 
+                    type="Emphasized" 
+                    press="onSaveRoute" />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

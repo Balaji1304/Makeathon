@@ -30,8 +30,9 @@ def get_fleet_overview(db: DbSession) -> FleetOverview:
                 "total_distance"
             ),
         )
-        .join(Vehicle, TransportStageFact.vehicle_id == Vehicle.vehicle_id)
+        .select_from(Vehicle)
         .join(TransportType, Vehicle.transport_type_id == TransportType.transport_type_id)
+        .outerjoin(TransportStageFact, TransportStageFact.vehicle_id == Vehicle.vehicle_id)
         .group_by(TransportType.name)
         .all()
     )

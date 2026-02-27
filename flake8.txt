@@ -1,0 +1,146 @@
+app/analytics\cost_analysis.py:59:1: W391 blank line at end of file
+app/analytics\fact_builder.py:67:80: E501 line too long (80 > 79 characters)
+app/analytics\fact_builder.py:93:80: E501 line too long (81 > 79 characters)
+app/analytics\fact_builder.py:126:80: E501 line too long (85 > 79 characters)
+app/analytics\fact_builder.py:192:80: E501 line too long (82 > 79 characters)
+app/analytics\fact_builder.py:198:1: W391 blank line at end of file
+app/analytics\utilization.py:62:80: E501 line too long (86 > 79 characters)
+app/analytics\utilization.py:90:80: E501 line too long (91 > 79 characters)
+app/analytics\utilization.py:122:80: E501 line too long (83 > 79 characters)
+app/analytics\utilization.py:124:1: W391 blank line at end of file
+app/api\__init__.py:2:1: W391 blank line at end of file
+app/api\deps.py:10:1: W391 blank line at end of file
+app/api\main.py:15:1: E402 module level import not at top of file
+app/api\main.py:19:25: E261 at least two spaces before inline comment
+app/api\main.py:25:80: E501 line too long (81 > 79 characters)
+app/api\main.py:30:80: E501 line too long (82 > 79 characters)
+app/api\main.py:32:1: E302 expected 2 blank lines, found 1
+app/api\main.py:36:1: W391 blank line at end of file
+app/api\routes\__init__.py:5:1: W391 blank line at end of file
+app/api\routes\alerts.py:22:80: E501 line too long (105 > 79 characters)
+app/api\routes\alerts.py:28:80: E501 line too long (85 > 79 characters)
+app/api\routes\alerts.py:33:1: W391 blank line at end of file
+app/api\routes\dashboard.py:43:1: W391 blank line at end of file
+app/api\routes\fleet.py:34:80: E501 line too long (90 > 79 characters)
+app/api\routes\fleet.py:35:80: E501 line too long (91 > 79 characters)
+app/api\routes\fleet.py:61:80: E501 line too long (90 > 79 characters)
+app/api\routes\fleet.py:85:1: W391 blank line at end of file
+app/api\routes\orders.py:34:80: E501 line too long (81 > 79 characters)
+app/api\routes\orders.py:53:80: E501 line too long (89 > 79 characters)
+app/api\routes\orders.py:71:80: E501 line too long (81 > 79 characters)
+app/api\routes\orders.py:129:1: W391 blank line at end of file
+app/api\routes\routes.py:40:80: E501 line too long (81 > 79 characters)
+app/api\routes\routes.py:42:1: W391 blank line at end of file
+app/api\routes\simulation.py:14:80: E501 line too long (84 > 79 characters)
+app/api\routes\simulation.py:27:80: E501 line too long (91 > 79 characters)
+app/api\routes\simulation.py:31:80: E501 line too long (82 > 79 characters)
+app/api\routes\simulation.py:41:1: W391 blank line at end of file
+app/api\schemas.py:82:1: W391 blank line at end of file
+app/database\connection.py:36:80: E501 line too long (84 > 79 characters)
+app/database\connection.py:42:80: E501 line too long (86 > 79 characters)
+app/database\connection.py:58:80: E501 line too long (102 > 79 characters)
+app/database\connection.py:61:80: E501 line too long (176 > 79 characters)
+app/database\models.py:5:1: F401 'sqlalchemy.UniqueConstraint' imported but unused
+app/database\models.py:54:80: E501 line too long (85 > 79 characters)
+app/database\models.py:67:80: E501 line too long (81 > 79 characters)
+app/database\models.py:70:80: E501 line too long (85 > 79 characters)
+app/database\models.py:83:80: E501 line too long (84 > 79 characters)
+app/database\models.py:90:80: E501 line too long (87 > 79 characters)
+app/database\models.py:107:80: E501 line too long (88 > 79 characters)
+app/database\models.py:132:80: E501 line too long (88 > 79 characters)
+app/database\models.py:156:80: E501 line too long (90 > 79 characters)
+app/database\models.py:157:80: E501 line too long (90 > 79 characters)
+app/database\models.py:184:80: E501 line too long (80 > 79 characters)
+app/database\models.py:185:80: E501 line too long (84 > 79 characters)
+app/database\models.py:209:80: E501 line too long (80 > 79 characters)
+app/database\models.py:238:80: E501 line too long (81 > 79 characters)
+app/database\models.py:239:80: E501 line too long (85 > 79 characters)
+app/database\models.py:240:80: E501 line too long (81 > 79 characters)
+app/database\models.py:268:1: W391 blank line at end of file
+app/db\__init__.py:1:80: E501 line too long (103 > 79 characters)
+app/db\__init__.py:2:1: W391 blank line at end of file
+app/db\connection.py:9:1: W391 blank line at end of file
+app/ingestion\csv_loader.py:10:1: F401 'app.database.models.FreightOrderItem' imported but unused
+app/ingestion\csv_loader.py:29:80: E501 line too long (83 > 79 characters)
+app/ingestion\csv_loader.py:117:80: E501 line too long (82 > 79 characters)
+app/ingestion\csv_loader.py:186:80: E501 line too long (84 > 79 characters)
+app/ingestion\csv_loader.py:199:80: E501 line too long (95 > 79 characters)
+app/ingestion\csv_loader.py:218:80: E501 line too long (103 > 79 characters)
+app/ingestion\csv_loader.py:221:80: E501 line too long (130 > 79 characters)
+app/ingestion\csv_loader.py:222:80: E501 line too long (130 > 79 characters)
+app/ingestion\csv_loader.py:223:80: E501 line too long (148 > 79 characters)
+app/ingestion\csv_loader.py:224:80: E501 line too long (163 > 79 characters)
+app/ingestion\csv_loader.py:229:80: E501 line too long (87 > 79 characters)
+app/ingestion\csv_loader.py:235:80: E501 line too long (102 > 79 characters)
+app/ingestion\csv_loader.py:253:80: E501 line too long (97 > 79 characters)
+app/ingestion\csv_loader.py:270:80: E501 line too long (105 > 79 characters)
+app/ingestion\csv_loader.py:274:80: E501 line too long (103 > 79 characters)
+app/ingestion\csv_loader.py:278:80: E501 line too long (94 > 79 characters)
+app/ingestion\csv_loader.py:298:80: E501 line too long (82 > 79 characters)
+app/ingestion\csv_loader.py:299:80: E501 line too long (90 > 79 characters)
+app/ingestion\csv_loader.py:303:80: E501 line too long (98 > 79 characters)
+app/ingestion\csv_loader.py:307:80: E501 line too long (90 > 79 characters)
+app/ingestion\csv_loader.py:313:80: E501 line too long (102 > 79 characters)
+app/ingestion\csv_loader.py:331:80: E501 line too long (97 > 79 characters)
+app/ingestion\csv_loader.py:346:80: E501 line too long (107 > 79 characters)
+app/ingestion\csv_loader.py:350:80: E501 line too long (97 > 79 characters)
+app/ingestion\csv_loader.py:356:80: E501 line too long (103 > 79 characters)
+app/ingestion\csv_loader.py:383:80: E501 line too long (109 > 79 characters)
+app/ingestion\csv_loader.py:419:26: E203 whitespace before ':'
+app/ingestion\csv_loader.py:437:80: E501 line too long (86 > 79 characters)
+app/ingestion\csv_loader.py:439:80: E501 line too long (91 > 79 characters)
+app/ingestion\csv_loader.py:441:80: E501 line too long (97 > 79 characters)
+app/ingestion\csv_loader.py:443:80: E501 line too long (91 > 79 characters)
+app/ingestion\csv_loader.py:445:80: E501 line too long (98 > 79 characters)
+app/ingestion\csv_loader.py:449:80: E501 line too long (81 > 79 characters)
+app/ml\__init__.py:1:80: E501 line too long (93 > 79 characters)
+app/ml\dataset.py:2:80: E501 line too long (108 > 79 characters)
+app/ml\dataset.py:11:1: F401 'app.ml.features.TARGET_LOAD' imported but unused
+app/ml\dataset.py:22:1: E302 expected 2 blank lines, found 1
+app/ml\dataset.py:45:80: E501 line too long (90 > 79 characters)
+app/ml\dataset.py:69:80: E501 line too long (98 > 79 characters)
+app/ml\features.py:56:80: E501 line too long (85 > 79 characters)
+app/ml\inference.py:2:80: E501 line too long (95 > 79 characters)
+app/ml\inference.py:6:1: F401 'typing.List' imported but unused
+app/ml\inference.py:21:80: E501 line too long (84 > 79 characters)
+app/ml\inference.py:31:80: E501 line too long (80 > 79 characters)
+app/ml\simulator.py:2:80: E501 line too long (88 > 79 characters)
+app/ml\simulator.py:3:80: E501 line too long (81 > 79 characters)
+app/ml\simulator.py:8:1: F401 'pandas as pd' imported but unused
+app/ml\simulator.py:21:80: E501 line too long (104 > 79 characters)
+app/ml\simulator.py:23:80: E501 line too long (87 > 79 characters)
+app/ml\simulator.py:34:80: E501 line too long (91 > 79 characters)
+app/ml\simulator.py:35:80: E501 line too long (106 > 79 characters)
+app/ml\simulator.py:43:80: E501 line too long (84 > 79 characters)
+app/ml\simulator.py:58:80: E501 line too long (166 > 79 characters)
+app/ml\simulator.py:66:80: E501 line too long (80 > 79 characters)
+app/ml\simulator.py:87:6: W292 no newline at end of file
+app/ml\training.py:2:80: E501 line too long (85 > 79 characters)
+app/ml\training.py:80:80: E501 line too long (87 > 79 characters)
+app/ml\training.py:92:80: E501 line too long (99 > 79 characters)
+app/ml\training.py:100:80: E501 line too long (94 > 79 characters)
+app/optimization\consolidation.py:52:80: E501 line too long (80 > 79 characters)
+app/optimization\consolidation.py:61:80: E501 line too long (81 > 79 characters)
+app/optimization\consolidation.py:63:1: W391 blank line at end of file
+app/optimization\scoring.py:2:1: F401 'typing.Dict' imported but unused
+app/optimization\scoring.py:39:80: E501 line too long (98 > 79 characters)
+app/optimization\scoring.py:43:1: W391 blank line at end of file
+app/optimization\simulation.py:3:1: F401 'typing.List' imported but unused
+app/optimization\simulation.py:30:80: E501 line too long (81 > 79 characters)
+app/optimization\simulation.py:104:80: E501 line too long (89 > 79 characters)
+app/optimization\simulation.py:105:80: E501 line too long (87 > 79 characters)
+app/optimization\simulation.py:106:80: E501 line too long (114 > 79 characters)
+app/optimization\simulation.py:108:80: E501 line too long (100 > 79 characters)
+app/optimization\simulation.py:109:80: E501 line too long (131 > 79 characters)
+app/optimization\simulation.py:118:1: W391 blank line at end of file
+app/recommendation\engine.py:2:80: E501 line too long (89 > 79 characters)
+app/recommendation\engine.py:28:80: E501 line too long (113 > 79 characters)
+app/recommendation\engine.py:65:80: E501 line too long (89 > 79 characters)
+app/recommendation\engine.py:89:80: E501 line too long (98 > 79 characters)
+app/services\analytics_service.py:62:80: E501 line too long (98 > 79 characters)
+app/services\analytics_service.py:70:80: E501 line too long (82 > 79 characters)
+app/services\analytics_service.py:95:80: E501 line too long (85 > 79 characters)
+app/services\analytics_service.py:112:1: W391 blank line at end of file
+app/services\optimization_service.py:35:1: W391 blank line at end of file
+app/warehouse\__init__.py:1:80: E501 line too long (86 > 79 characters)
+app/warehouse\__init__.py:2:1: W391 blank line at end of file
