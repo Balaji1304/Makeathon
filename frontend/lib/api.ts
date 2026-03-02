@@ -178,8 +178,8 @@ export async function fetchOrdersData(): Promise<OrdersData> {
       id: `ORD-${o.order_id}`,
       origin: "Source Location",
       destination: "Destination Hub",
-      weight: `${Math.round(o.avg_load_ratio * 1000)} kg`,
-      priority: o.total_co2_kg > 100 ? "high" : "medium",
+      weight: `${Math.round(o.avg_load_ratio * 100)}% Load`,
+      priority: o.total_co2_kg > 1000 ? "high" : (o.total_co2_kg > 500 ? "medium" : "low"),
       emissions: `${Math.round(o.total_co2_kg ?? 0)} kg CO₂`,
       status: "assigned",
       route: o.license_plate ? `Vehicle ${o.license_plate}` : `Vehicle ${o.vehicle_id}`
@@ -197,11 +197,11 @@ export async function fetchAlertsData(): Promise<AlertsData> {
   const { data } = await api.get("/alerts/recommendations");
   const mappedAlerts: Alert[] = data.map((r: any, idx: number) => ({
     id: idx + 1,
-    type: r.alert_type === "optimization" ? "optimization" : "sustainability",
-    title: r.alert_type === "optimization" ? `Optimize Order ${r.order_id}` : `Alert: Order ${r.order_id}`,
+    type: (r.alert_type.includes("consolidation") || r.alert_type.includes("merge")) ? "optimization" : "sustainability",
+    title: (r.alert_type.includes("consolidation") || r.alert_type.includes("merge")) ? `Optimize Order ${r.order_id}` : `Alert: Order ${r.order_id}`,
     message: r.explanation,
     time: "Just now",
-    priority: r.priority_score > 0.8 ? "high" : (r.priority_score > 0.5 ? "medium" : "low")
+    priority: r.priority_score > 70 ? "high" : (r.priority_score > 40 ? "medium" : "low")
   }));
 
   return {

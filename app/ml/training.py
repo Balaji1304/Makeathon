@@ -28,22 +28,40 @@ def _make_pipeline() -> Pipeline:
     ])
 
 
+from sklearn.model_selection import GridSearchCV
+
+def _hyperparameter_tuning(X: pd.DataFrame, y: pd.Series) -> Pipeline:
+    pipe = _make_pipeline()
+    param_grid = {
+        "regressor__n_estimators": [50, 100, 200],
+        "regressor__max_depth": [None, 10, 20],
+        "regressor__min_samples_split": [2, 5],
+    }
+    logger.info("Starting GridSearchCV for optimal hyperparameters...")
+    grid_search = GridSearchCV(
+        pipe, param_grid, cv=5, scoring="neg_mean_absolute_error", n_jobs=-1
+    )
+    grid_search.fit(X, y)
+    logger.info("Best parameters found: %s", grid_search.best_params_)
+    return grid_search.best_estimator_
+
+
 def train_emission_model(
     train_df: pd.DataFrame,
     test_df: Optional[pd.DataFrame] = None,
 ) -> Dict[str, Any]:
     X_train, y_train = get_feature_matrix(train_df, TARGET_CO2)
-    pipe = _make_pipeline()
-    pipe.fit(X_train, y_train)
+    best_pipe = _hyperparameter_tuning(X_train, y_train)
+    
     metrics = {}
     if test_df is not None and not test_df.empty:
         X_test, y_test = get_feature_matrix(test_df, TARGET_CO2)
         from sklearn.metrics import mean_absolute_error, r2_score
-        pred = pipe.predict(X_test)
+        pred = best_pipe.predict(X_test)
         metrics["mae"] = float(mean_absolute_error(y_test, pred))
         metrics["r2"] = float(r2_score(y_test, pred))
     return {
-        "model": pipe,
+        "model": best_pipe,
         "feature_columns": list(X_train.columns),
         "metrics": metrics,
     }
@@ -54,17 +72,17 @@ def train_load_model(
     test_df: Optional[pd.DataFrame] = None,
 ) -> Dict[str, Any]:
     X_train, y_train = get_feature_matrix(train_df, TARGET_LOAD)
-    pipe = _make_pipeline()
-    pipe.fit(X_train, y_train)
+    best_pipe = _hyperparameter_tuning(X_train, y_train)
+    
     metrics = {}
     if test_df is not None and not test_df.empty:
         X_test, y_test = get_feature_matrix(test_df, TARGET_LOAD)
         from sklearn.metrics import mean_absolute_error, r2_score
-        pred = pipe.predict(X_test)
+        pred = best_pipe.predict(X_test)
         metrics["mae"] = float(mean_absolute_error(y_test, pred))
         metrics["r2"] = float(r2_score(y_test, pred))
     return {
-        "model": pipe,
+        "model": best_pipe,
         "feature_columns": list(X_train.columns),
         "metrics": metrics,
     }

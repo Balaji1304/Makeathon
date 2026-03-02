@@ -56,6 +56,10 @@ def main() -> None:
     with tab_overview:
         st.subheader("Distance vs. CO₂ by Order")
         if not df_ord.empty:
+            st.scatter_chart(
+                df_ord.set_index("order_id")[["distance_km", "total_co2_kg"]],
+                use_container_width=True
+            )
             st.dataframe(df_ord.sort_values("total_co2_kg", ascending=False).head(20))
         st.subheader("Stage Facts (sample)")
         st.dataframe(df_facts.head(50))
@@ -63,14 +67,32 @@ def main() -> None:
     with tab_vehicles:
         st.subheader("Fleet Utilization")
         if not df_veh.empty:
-            st.dataframe(df_veh)
-            st.bar_chart(
-                df_veh.set_index("vehicle_id")[["avg_load_ratio"]],
+            # Multi-select to filter specific vehicle IDs (e.g. 1, 2, 3)
+            all_vehicles = sorted(df_veh["vehicle_id"].dropna().unique().tolist())
+            selected_vehicles = st.multiselect(
+                "Filter by Vehicle ID:", 
+                options=all_vehicles, 
+                default=all_vehicles if len(all_vehicles) <= 3 else all_vehicles[:3]
             )
+            
+            df_veh_filtered = df_veh[df_veh["vehicle_id"].isin(selected_vehicles)]
+            
+            st.dataframe(df_veh_filtered)
+            
+            # Interactive Bar Chart for selected vehicles
+            if not df_veh_filtered.empty:
+                st.bar_chart(
+                    df_veh_filtered.set_index("vehicle_id")[["avg_load_ratio", "total_co2_kg"]],
+                    use_container_width=True
+                )
 
     with tab_routes:
         st.subheader("High Emission Routes")
         if not df_ord.empty:
+            st.bar_chart(
+                df_ord.sort_values("total_co2_kg", ascending=False).head(20).set_index("order_id")[["total_co2_kg"]],
+                use_container_width=True
+            )
             st.dataframe(
                 df_ord.sort_values("total_co2_kg", ascending=False).head(20)
             )
