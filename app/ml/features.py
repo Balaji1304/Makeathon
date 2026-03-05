@@ -50,19 +50,27 @@ def _safe_float(x: Optional[float], default: float = 0.0) -> float:
         return default
 
 
-def build_features_from_session(session: Session) -> pd.DataFrame:
+from app.database.models import TransportStageFact, TransportType
+
+
+def build_features_from_session(session: Session, order_id: Optional[int] = None) -> pd.DataFrame:
     """
     Read transport_stage_fact and build ML-ready features.
     Returns DataFrame with FEATURE_COLS + co2_emission (alias of co2_kg), load_ratio.
     """
-    rows = session.query(TransportStageFact).all()
+    # Fetch all unique transport types once to ensure STABLE label encoding
+    # otherwise vehicle_type_encoded changes based on dataframe row order/subset
+    all_types = [t.name for t in session.query(TransportType.name).order_by(TransportType.name).all()]
+    types_seen = {name.strip(): i for i, name in enumerate(all_types)}
+
+    query = session.query(TransportStageFact)
+    if order_id is not None:
+        query = query.filter(TransportStageFact.order_id == order_id)
+        
+    rows = query.all()
     if not rows:
         logger.warning("No rows in transport_stage_fact")
         return pd.DataFrame()
-
-    # Unique transport_type for label encoding (stable order)
-    types_seen: dict[str, int] = {}
-    next_code = 0
 
     records = []
     for r in rows:
@@ -75,9 +83,6 @@ def build_features_from_session(session: Session) -> pd.DataFrame:
         emission_per_km = co2_kg / distance_km if distance_km > 0 else 0.0
 
         tt = (r.transport_type or "").strip()
-        if tt and tt not in types_seen:
-            types_seen[tt] = next_code
-            next_code += 1
         vehicle_type_encoded = types_seen.get(tt, -1)
 
         ts = r.created_at
@@ -99,5 +104,5 @@ def build_features_from_session(session: Session) -> pd.DataFrame:
 
     df = pd.DataFrame(records)
     df = df.fillna(0.0)
-    logger.info("Built features for %d rows", len(df))
+    logger.info("Built features for %d rows (order_id=%s)", len(df), order_id)
     return df

@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api', // fallback URL if env is not loaded
-  timeout: 10000, // 10s timeout
+  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api',
+  timeout: 30000, // 30s timeout for ML tasks
 });
 
 // Error interceptor

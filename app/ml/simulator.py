@@ -33,11 +33,8 @@ def simulate_order(
     Simulate switching the given order to an alternative vehicle type using ML predictions.
     Returns current vs alternative predicted_co2, predicted_load_ratio, CO2 savings %, utilization change.
     """
-    full_df = build_features_from_session(session)
-    if full_df.empty:
-        return {"error": "No fact data", "order_id": order_id}
-
-    order_rows = full_df[full_df["order_id"] == order_id]
+    # Performance fix: filter by order_id immediately
+    order_rows = build_features_from_session(session, order_id=order_id)
     if order_rows.empty:
         return {"error": f"No stages for order_id={order_id}", "order_id": order_id}
 
@@ -54,11 +51,12 @@ def simulate_order(
     cur_co2 = current["predicted_co2"].sum()
     cur_load = current["predicted_load_ratio"].mean()
 
-    type_to_code = full_df.drop_duplicates("transport_type")[["transport_type", "vehicle_type_encoded"]].set_index("transport_type")["vehicle_type_encoded"].to_dict()
+    # Re-calculate stable type encoding map
+    all_types = [t.name for t in session.query(TransportType.name).order_by(TransportType.name).all()]
+    type_to_code = {name.strip(): i for i, name in enumerate(all_types)}
+    
     alt_type = alternative_vehicle_type.strip()
-    code = type_to_code.get(alt_type)
-    if code is None:
-        code = int(max(full_df["vehicle_type_encoded"].max(), 0) + 1)
+    code = type_to_code.get(alt_type, -1)
 
     alt_df = order_rows.copy()
     alt_df["vehicle_capacity"] = alt_capacity
