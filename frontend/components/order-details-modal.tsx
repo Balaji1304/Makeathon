@@ -8,8 +8,16 @@ import {
     DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog'
-import { MapPin, Truck, Leaf, Route, Loader2 } from 'lucide-react'
-import { fetchOrderDetails, type OrderDetail } from '@/lib/api'
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select'
+import { MapPin, Truck, Leaf, Route, Loader2, Play, Sparkles } from 'lucide-react'
+import { fetchOrderDetails, fetchSimulateOrder, type OrderDetail, type SimulationResponse } from '@/lib/api'
+import { Button } from '@/components/ui/button'
 
 interface OrderDetailsModalProps {
     orderId: string | null
@@ -21,6 +29,11 @@ export function OrderDetailsModal({ orderId, isOpen, onClose }: OrderDetailsModa
     const [data, setData] = useState<OrderDetail | null>(null)
     const [loading, setLoading] = useState(false)
 
+    // Simulator State
+    const [selectedVehicle, setSelectedVehicle] = useState<string>("Light Commercial Vehicle (Electric)")
+    const [simLoading, setSimLoading] = useState(false)
+    const [simResult, setSimResult] = useState<SimulationResponse | null>(null)
+
     useEffect(() => {
         if (isOpen && orderId) {
             setLoading(true)
@@ -29,11 +42,21 @@ export function OrderDetailsModal({ orderId, isOpen, onClose }: OrderDetailsModa
             fetchOrderDetails(numericId).then((res) => {
                 setData(res)
                 setLoading(false)
+                setSimResult(null) // Reset sim on new order load
             })
         } else {
             setData(null)
+            setSimResult(null)
         }
     }, [isOpen, orderId])
+
+    const handleSimulate = async () => {
+        if (!data) return
+        setSimLoading(true)
+        const res = await fetchSimulateOrder(data.order_id, selectedVehicle)
+        setSimResult(res)
+        setSimLoading(false)
+    }
 
     return (
         <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -120,9 +143,63 @@ export function OrderDetailsModal({ orderId, isOpen, onClose }: OrderDetailsModa
                         </div>
 
                     </div>
+
                 ) : (
                     <div className="py-12 text-center text-muted-foreground">
                         No route breakdown available for {orderId}.
+                    </div>
+                )}
+
+                {/* Prescriptive Analytics Simulator */}
+                {data && (
+                    <div className="mt-8 pt-6 border-t">
+                        <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                            <Sparkles className="w-5 h-5 text-accent" />
+                            AI Prescriptive Simulator
+                        </h3>
+                        <p className="text-sm text-muted-foreground mb-4">
+                            Test alternative vehicle assignments to project emissions savings and load efficiency using Machine Learning.
+                        </p>
+
+                        <div className="flex gap-3 mb-4">
+                            <Select value={selectedVehicle} onValueChange={setSelectedVehicle}>
+                                <SelectTrigger className="w-full">
+                                    <SelectValue placeholder="Select alternative vehicle type" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="Light Commercial Vehicle (Electric)">Light Commercial (Electric)</SelectItem>
+                                    <SelectItem value="2-Axle Truck (Combustion)">2-Axle Truck (Combustion)</SelectItem>
+                                    <SelectItem value="3-Axle Truck (Hybrid)">3-Axle Truck (Hybrid)</SelectItem>
+                                    <SelectItem value="Articulated Truck (Combustion)">Articulated Truck (Combustion)</SelectItem>
+                                </SelectContent>
+                            </Select>
+                            <Button onClick={handleSimulate} disabled={simLoading} className="gap-2 shrink-0">
+                                {simLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Play className="w-4 h-4" />}
+                                Simulate
+                            </Button>
+                        </div>
+
+                        {simResult && (
+                            <div className={`p-4 rounded-xl border ${simResult.savings_percentage > 0 ? 'bg-primary/5 border-primary/20' : 'bg-destructive/5 border-destructive/20'} animate-in fade-in zoom-in duration-300`}>
+                                <div className="flex justify-between items-start mb-2">
+                                    <div className="font-semibold">{simResult.recommendation_text}</div>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4 mt-3">
+                                    <div>
+                                        <div className="text-xs text-muted-foreground uppercase">Projected CO₂ Savings</div>
+                                        <div className={`text-xl font-bold ${simResult.savings_percentage > 0 ? 'text-primary' : 'text-destructive'}`}>
+                                            {simResult.savings_percentage > 0 ? '+' : ''}{simResult.savings_percentage.toFixed(1)}%
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="text-xs text-muted-foreground uppercase">Utilization Shift</div>
+                                        <div className={`text-xl font-bold ${simResult.utilization_change > 0 ? 'text-primary' : (simResult.utilization_change < 0 ? 'text-destructive' : 'text-muted-foreground')}`}>
+                                            {simResult.utilization_change > 0 ? '+' : ''}{(simResult.utilization_change * 100).toFixed(1)}% Fill
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 )}
             </DialogContent>

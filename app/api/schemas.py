@@ -56,6 +56,7 @@ class RouteStop(BaseModel):
 
 class RouteMapOrder(BaseModel):
     order_id: int
+    avg_load_ratio: float
     stops: List[RouteStop]
 
 

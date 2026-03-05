@@ -77,26 +77,31 @@ export default function RouteMap({ orders, height = "400px" }: RouteMapProps) {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
 
-                {orders.map((order, index) => {
+                {orders.map((order) => {
                     if (order.stops.length < 2) return null
 
                     const sortedStops = [...order.stops].sort((a, b) => a.sequence - b.sequence)
                     const positions: [number, number][] = sortedStops.map(s => [s.lat, s.lon])
-                    const color = COLORS[index % COLORS.length]
+
+                    // Heatmap Color Logic
+                    const ratio = order.avg_load_ratio || 0
+                    let color = '#f59e0b' // amber
+                    if (ratio >= 0.70) color = '#10b981' // green
+                    else if (ratio < 0.35) color = '#ef4444' // red
 
                     return (
                         <div key={order.order_id}>
                             {/* Route Line */}
                             <Polyline
                                 positions={positions}
-                                pathOptions={{ color, weight: 4, opacity: 0.8 }}
+                                pathOptions={{ color, weight: ratio < 0.35 ? 6 : 4, opacity: 0.8 }}
                             />
 
                             {/* Start Node */}
                             <Marker position={positions[0]}>
                                 <Popup>
                                     <strong>Order #{order.order_id}</strong><br />
-                                    Origin (Sequence 1)<br />
+                                    Load Ratio: {(ratio * 100).toFixed(0)}%<br />
                                     [{positions[0][0].toFixed(2)}, {positions[0][1].toFixed(2)}]
                                 </Popup>
                             </Marker>
@@ -105,7 +110,7 @@ export default function RouteMap({ orders, height = "400px" }: RouteMapProps) {
                             <Marker position={positions[positions.length - 1]}>
                                 <Popup>
                                     <strong>Order #{order.order_id}</strong><br />
-                                    Destination<br />
+                                    Load Ratio: {(ratio * 100).toFixed(0)}%<br />
                                     [{positions[positions.length - 1][0].toFixed(2)}, {positions[positions.length - 1][1].toFixed(2)}]
                                 </Popup>
                             </Marker>
@@ -115,6 +120,14 @@ export default function RouteMap({ orders, height = "400px" }: RouteMapProps) {
 
                 <MapBoundsFit orders={orders} />
             </MapContainer>
+
+            {/* Heatmap Legend */}
+            <div className="absolute bottom-4 right-4 z-[400] bg-background/95 backdrop-blur border shadow-sm p-3 rounded-lg text-xs font-medium space-y-2">
+                <div className="font-semibold text-muted-foreground mb-1">Utilization Heatmap</div>
+                <div className="flex items-center gap-2"><div className="w-4 h-1 bg-[#10b981] rounded-full"></div> Optimal (&ge; 70%)</div>
+                <div className="flex items-center gap-2"><div className="w-4 h-1 bg-[#f59e0b] rounded-full"></div> Moderate</div>
+                <div className="flex items-center gap-2"><div className="w-4 h-1 bg-[#ef4444] rounded-full"></div> Empty Miles (&lt; 35%)</div>
+            </div>
         </div>
     )
 }

@@ -66,6 +66,7 @@ export interface RouteStop {
 
 export interface RouteMapOrder {
   order_id: number
+  avg_load_ratio: number
   stops: RouteStop[]
 }
 
@@ -219,6 +220,31 @@ export async function fetchOrdersData(): Promise<OrdersData> {
       { name: 'ML Optimized Routing', duration: 'Predicted', emissions: 'Reduced', cost: 'Optimized', efficiency: 90, recommended: true }
     ]
   };
+}
+
+export interface SimulationRequest {
+  order_id: number
+  vehicle_type: string
+}
+
+export interface SimulationResponse {
+  order_id: number
+  vehicle_type: string
+  predicted_co2: number
+  savings_percentage: number
+  utilization_change: number
+  recommendation_text: string
+}
+
+export async function fetchSimulateOrder(orderId: number, vehicleType: string): Promise<SimulationResponse | null> {
+  try {
+    const payload: SimulationRequest = { order_id: orderId, vehicle_type: vehicleType };
+    const { data } = await api.post("/simulate", payload);
+    return data;
+  } catch (err) {
+    console.error(`Simulation failed for order ${orderId}:`, err);
+    return null;
+  }
 }
 
 export async function fetchOrderDetails(orderId: string): Promise<OrderDetail | null> {
