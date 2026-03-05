@@ -1,12 +1,16 @@
 'use client'
 
+import { useState } from 'react'
+
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Package, MapPin, Loader2, AlertCircle } from 'lucide-react'
 import useSWR from 'swr'
-import { fetchOrdersData, type OrdersData } from '@/lib/api'
+import dynamic from 'next/dynamic'
+import { fetchOrdersData, fetchRouteMap, type OrdersData } from '@/lib/api'
+import { OrderDetailsModal } from '@/components/order-details-modal'
 
 const fallbackData: OrdersData = {
   orders: [
@@ -21,12 +25,31 @@ const fallbackData: OrdersData = {
   ],
 }
 
+// Dynamically import map (No SSR allowed for Leaflet)
+const RouteMap = dynamic(() => import('@/components/route-map'), {
+  ssr: false,
+  loading: () => (
+    <div className="h-[400px] w-full flex items-center justify-center bg-muted rounded-xl border border-border">
+      <div className="flex flex-col items-center gap-2 text-muted-foreground">
+        <Loader2 className="w-6 h-6 animate-spin" />
+        <p>Loading interactive map...</p>
+      </div>
+    </div>
+  )
+})
+
 export function OrdersView() {
+  const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null)
+
   const { data, error, isLoading, mutate } = useSWR('orders', fetchOrdersData, {
     fallbackData,
     revalidateOnFocus: true,
     refreshInterval: 30000,
-    onError: () => {},
+    onError: () => { },
+  })
+
+  const { data: routeData } = useSWR('routes-map', fetchRouteMap, {
+    revalidateOnFocus: false
   })
 
   const orders = data?.orders ?? fallbackData.orders
@@ -61,6 +84,22 @@ export function OrdersView() {
           </div>
         </div>
       </div>
+
+      {/* Geospatial Map Visualization */}
+      <Card className="p-6 overflow-hidden">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h2 className="text-xl font-semibold">Live Route Visualization</h2>
+            <p className="text-sm text-muted-foreground">Geospatial tracking of active logistics paths</p>
+          </div>
+          <Badge variant="outline" className="gap-1 px-3 py-1">
+            <MapPin className="w-3 h-3" />
+            {routeData?.length || 0} Routes Mapped
+          </Badge>
+        </div>
+
+        <RouteMap orders={routeData || []} height="450px" />
+      </Card>
 
       {/* Scenario Comparison */}
       <Card className="p-6">
@@ -114,7 +153,7 @@ export function OrdersView() {
       {/* Orders Table */}
       <Card className="p-6">
         <h2 className="text-xl font-semibold mb-4">Customer Orders</h2>
-        
+
         <Tabs defaultValue="all" className="w-full">
           <TabsList>
             <TabsTrigger value="all">All Orders</TabsTrigger>
@@ -140,8 +179,8 @@ export function OrdersView() {
                             order.priority === 'high'
                               ? 'bg-accent text-accent-foreground'
                               : order.priority === 'medium'
-                              ? 'bg-chart-2 text-primary-foreground'
-                              : ''
+                                ? 'bg-chart-2 text-primary-foreground'
+                                : ''
                           }
                         >
                           {order.priority} priority
@@ -182,7 +221,12 @@ export function OrdersView() {
                       <Button size="sm" variant="outline" className="flex-1 lg:flex-none">
                         Assign
                       </Button>
-                      <Button size="sm" variant="outline" className="flex-1 lg:flex-none">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="flex-1 lg:flex-none"
+                        onClick={() => setSelectedOrderId(order.id)}
+                      >
                         Details
                       </Button>
                     </div>
@@ -193,6 +237,12 @@ export function OrdersView() {
           </TabsContent>
         </Tabs>
       </Card>
+
+      <OrderDetailsModal
+        orderId={selectedOrderId}
+        isOpen={!!selectedOrderId}
+        onClose={() => setSelectedOrderId(null)}
+      />
     </div>
   )
 }

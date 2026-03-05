@@ -15,6 +15,9 @@ EMISSION_MODEL_PATH = _MODELS_DIR / "emission_model.joblib"
 LOAD_MODEL_PATH = _MODELS_DIR / "load_model.joblib"
 
 
+from functools import lru_cache
+
+@lru_cache(maxsize=2)
 def _load_artifact(path: Path) -> Dict[str, Any]:
     import joblib
     if not path.exists():

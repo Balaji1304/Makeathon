@@ -38,7 +38,7 @@ export function AlertsView() {
     fallbackData,
     revalidateOnFocus: true,
     refreshInterval: 15000,
-    onError: () => {},
+    onError: () => { },
   })
 
   const alerts = data?.alerts ?? fallbackData.alerts
@@ -108,11 +108,12 @@ export function AlertsView() {
       {/* Alerts List */}
       <div className="space-y-3">
         {alerts.map((alert) => {
-          const Icon = alert.icon
+          const Icon = ALERT_ICON_MAP[alert.type] || Info
+          const color = ALERT_COLOR_MAP[alert.type] || 'text-muted-foreground'
           return (
             <Card key={alert.id} className="p-5 hover:border-primary/50 transition-colors">
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0 ${alert.color}`}>
+                <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0 ${color}`}>
                   <Icon className="w-6 h-6" />
                 </div>
 
@@ -126,8 +127,8 @@ export function AlertsView() {
                           alert.priority === 'high'
                             ? 'bg-accent text-accent-foreground'
                             : alert.priority === 'medium'
-                            ? 'bg-chart-2 text-primary-foreground'
-                            : ''
+                              ? 'bg-chart-2 text-primary-foreground'
+                              : ''
                         }
                       >
                         {alert.priority}

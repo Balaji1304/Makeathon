@@ -58,6 +58,36 @@ export interface Scenario {
   recommended?: boolean
 }
 
+export interface RouteStop {
+  sequence: number
+  lat: number
+  lon: number
+}
+
+export interface RouteMapOrder {
+  order_id: number
+  stops: RouteStop[]
+}
+
+export interface OrderStop {
+  sequence_number: number
+  address_id: number
+  latitude: number | null
+  longitude: number | null
+  city: string | null
+  country: string | null
+}
+
+export interface OrderDetail {
+  order_id: number
+  vehicle_id: number | null
+  license_plate: string | null
+  distance_km: number
+  total_co2_kg: number
+  avg_load_ratio: number
+  stops: OrderStop[]
+}
+
 export interface OrdersData {
   orders: Order[]
   scenarios: Scenario[]
@@ -189,6 +219,26 @@ export async function fetchOrdersData(): Promise<OrdersData> {
       { name: 'ML Optimized Routing', duration: 'Predicted', emissions: 'Reduced', cost: 'Optimized', efficiency: 90, recommended: true }
     ]
   };
+}
+
+export async function fetchOrderDetails(orderId: string): Promise<OrderDetail | null> {
+  try {
+    const { data } = await api.get(`/orders/${orderId}`);
+    return data;
+  } catch (err) {
+    console.error(`Failed to load details for order ${orderId}:`, err);
+    return null;
+  }
+}
+
+export async function fetchRouteMap(): Promise<RouteMapOrder[]> {
+  try {
+    const { data } = await api.get("/routes/map");
+    return data;
+  } catch (err) {
+    console.error("Failed to load map routes:", err);
+    return [];
+  }
 }
 
 // ─── Alerts ──────────────────────────────────────────────────────────────────
