@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     db_port: int = 5432
     db_name: str = "greentrack"
     db_user: str = "greentrack_user"
-    db_password: str = "securepass"
+    db_password: str = ""
     db_echo: bool = False
     admin_database_url: str | None = None
     cost_per_km: float = 1.5

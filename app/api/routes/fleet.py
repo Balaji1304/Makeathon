@@ -1,14 +1,56 @@
 import logging
 
 from fastapi import APIRouter
+from pydantic import BaseModel
 from sqlalchemy import distinct, func
 
 from app.api.deps import DbSession
 from app.api.schemas import FleetOverview, FleetTypeStats
-from app.database.models import TransportStageFact, TransportType, Vehicle
+from app.database.models import TransportStageFact, TransportType, Vehicle, VehicleAttributes
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
+
+
+class VehicleTypeInfo(BaseModel):
+    code: str
+    description: str
+    capacity_kg: float | None
+    fuel_type: str
+
+
+@router.get("/vehicle-types", response_model=list[VehicleTypeInfo])
+def list_vehicle_types(db: DbSession) -> list[VehicleTypeInfo]:
+    logger.info("GET /fleet/vehicle-types")
+
+    rows = (
+        db.query(
+            TransportType.name,
+            TransportType.description,
+            VehicleAttributes.capacity_kg,
+        )
+        .outerjoin(VehicleAttributes, TransportType.transport_type_id == VehicleAttributes.transport_type_id)
+        .order_by(TransportType.name)
+        .all()
+    )
+
+    result = []
+    for name, desc, cap in rows:
+        desc_lower = (desc or "").lower()
+        name_lower = (name or "").lower()
+        if "elektro" in desc_lower or "electric" in desc_lower or "elektro" in name_lower:
+            fuel = "electric"
+        elif "lkw" in desc_lower or "truck" in desc_lower:
+            fuel = "truck"
+        else:
+            fuel = "van"
+        result.append(VehicleTypeInfo(
+            code=name or "",
+            description=desc or name or "",
+            capacity_kg=float(cap) if cap else None,
+            fuel_type=fuel,
+        ))
+    return result
 
 
 @router.get("/overview", response_model=FleetOverview)

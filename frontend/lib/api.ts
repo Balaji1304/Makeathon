@@ -47,6 +47,7 @@ export interface Order {
   emissions: string
   status: "assigned" | "pending" | "completed"
   route: string | null
+  routeHealth?: "optimal" | "moderate" | "low"
 }
 
 export interface Scenario {
@@ -230,6 +231,7 @@ export interface SimulationRequest {
 export interface SimulationResponse {
   order_id: number
   vehicle_type: string
+  current_predicted_co2: number
   predicted_co2: number
   savings_percentage: number
   utilization_change: number

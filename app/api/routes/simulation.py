@@ -33,6 +33,7 @@ def run_simulation(payload: SimulationRequest, db: DbSession) -> SimulationRespo
     return SimulationResponse(
         order_id=result["order_id"],
         vehicle_type=payload.vehicle_type,
+        current_predicted_co2=float(result["current_predicted_co2"]),
         predicted_co2=float(result["alternative_predicted_co2"]),
         savings_percentage=float(result["co2_savings_percent"]),
         utilization_change=float(result["utilization_improvement"]),

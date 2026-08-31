@@ -76,6 +76,7 @@ class SimulationRequest(BaseModel):
 class SimulationResponse(BaseModel):
     order_id: int
     vehicle_type: str
+    current_predicted_co2: float
     predicted_co2: float
     savings_percentage: float
     utilization_change: float

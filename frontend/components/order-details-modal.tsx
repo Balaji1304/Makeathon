@@ -5,6 +5,7 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
+    DialogFooter,
     DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog'
@@ -15,7 +16,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select'
-import { MapPin, Truck, Leaf, Route, Loader2, Play, Sparkles } from 'lucide-react'
+import { MapPin, Truck, Leaf, Route, Loader2, Play, Sparkles, ExternalLink } from 'lucide-react'
 import { fetchOrderDetails, fetchSimulateOrder, type OrderDetail, type SimulationResponse } from '@/lib/api'
 import { Button } from '@/components/ui/button'
 
@@ -23,13 +24,13 @@ interface OrderDetailsModalProps {
     orderId: string | null
     isOpen: boolean
     onClose: () => void
+    onOpenSimulator?: (orderId: number) => void
 }
 
-export function OrderDetailsModal({ orderId, isOpen, onClose }: OrderDetailsModalProps) {
+export function OrderDetailsModal({ orderId, isOpen, onClose, onOpenSimulator }: OrderDetailsModalProps) {
     const [data, setData] = useState<OrderDetail | null>(null)
     const [loading, setLoading] = useState(false)
 
-    // Simulator State
     const [selectedVehicle, setSelectedVehicle] = useState<string>("ZFT005")
     const [simLoading, setSimLoading] = useState(false)
     const [simResult, setSimResult] = useState<SimulationResponse | null>(null)
@@ -37,12 +38,11 @@ export function OrderDetailsModal({ orderId, isOpen, onClose }: OrderDetailsModa
     useEffect(() => {
         if (isOpen && orderId) {
             setLoading(true)
-            // Extract numeric ID from "ORD-123"
             const numericId = orderId.replace('ORD-', '')
             fetchOrderDetails(numericId).then((res) => {
                 setData(res)
                 setLoading(false)
-                setSimResult(null) // Reset sim on new order load
+                setSimResult(null)
             })
         } else {
             setData(null)
@@ -56,6 +56,12 @@ export function OrderDetailsModal({ orderId, isOpen, onClose }: OrderDetailsModa
         const res = await fetchSimulateOrder(data.order_id, selectedVehicle)
         setSimResult(res)
         setSimLoading(false)
+    }
+
+    const handleOpenSimulator = () => {
+        if (data && onOpenSimulator) {
+            onOpenSimulator(data.order_id)
+        }
     }
 
     return (
@@ -209,6 +215,20 @@ export function OrderDetailsModal({ orderId, isOpen, onClose }: OrderDetailsModa
                         </div>
                     )}
                 </div>
+
+                {/* Footer with Open in Simulator button */}
+                {data && onOpenSimulator && (
+                    <DialogFooter className="p-6 pt-0 shrink-0">
+                        <Button
+                            variant="outline"
+                            onClick={handleOpenSimulator}
+                            className="gap-2"
+                        >
+                            <ExternalLink className="w-4 h-4" />
+                            Open in Full Simulator
+                        </Button>
+                    </DialogFooter>
+                )}
             </DialogContent>
         </Dialog >
     )
